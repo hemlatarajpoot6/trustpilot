@@ -49,8 +49,6 @@ const SideNavContent = (props) => {
       {navigationConfig.map((menu) =>
         menu.submenu.length > 0 ? (
           <Menu.ItemGroup
-            key={menu.key}
-            title={setLocale(localization, menu.title)}
           >
             {menu.submenu.map((subMenuFirst) =>
               subMenuFirst.submenu.length > 0 ? (

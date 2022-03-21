@@ -12,6 +12,8 @@ export const AppViews = () => {
         <Route path={`${AUTH_PREFIX_PATH}/login-2`} component={lazy(() => import(`./authentication/login-2`))} />
         <Route path={`${AUTH_PREFIX_PATH}/register-1`} component={lazy(() => import(`./authentication/register-1`))} />
         <Route path={`${AUTH_PREFIX_PATH}/register-2`} component={lazy(() => import(`./authentication/register-2`))} />
+        <Route path={`${AUTH_PREFIX_PATH}/register-3`} component={lazy(() => import(`./authentication/register-3`))} />
+        <Route path={`${AUTH_PREFIX_PATH}/register-4`} component={lazy(() => import(`./authentication/register-4`))} />
         <Route path={`${AUTH_PREFIX_PATH}/forgot-password`} component={lazy(() => import(`./authentication/forgot-password`))} />
         <Route path={`${AUTH_PREFIX_PATH}/error-1`} component={lazy(() => import(`./errors/error-page-1`))} />
         <Route path={`${AUTH_PREFIX_PATH}/error-2`} component={lazy(() => import(`./errors/error-page-2`))} />
