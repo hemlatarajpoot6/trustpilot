@@ -3,7 +3,8 @@ import { SIDE_NAV_WIDTH, SIDE_NAV_COLLAPSED_WIDTH, NAV_TYPE_TOP } from 'constant
 // import { APP_NAME } from 'configs/AppConfig';
 import { connect } from "react-redux";
 import utils from 'utils';
-import { Grid } from 'antd';
+import { Grid, Menu, Dropdown, Divider } from 'antd';
+import { DownOutlined } from "@ant-design/icons"
 
 const { useBreakpoint } = Grid;
 
@@ -48,11 +49,36 @@ const getLogoDisplay = (isMobile, mobileLogo) => {
 
 export const Logo = (props) => {
   const isMobile = !utils.getBreakPoint(useBreakpoint()).includes('lg')
+
+
+  const profileMenu = (
+    <div className="nav-profile nav-dropdown">
+      <div className="nav-profile-header">
+        <div className="d-flex">
+          <div className="pl-3">
+            <h4 className="mb-0">Public profile setup</h4>
+            <Divider />
+            <span className="text-muted">Go to public profile</span>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  );
+
+
   return (
     <div
       className={getLogoDisplay(isMobile, props.mobileLogo)} 
       style={{width: `${getLogoWidthGutter(props, isMobile)}`}}>
         <h3>engineermaster.in</h3>
+        <Dropdown placement="bottomRight" overlay={profileMenu} trigger={["click"]}>
+      <Menu className="d-flex align-item-center" mode="horizontal">
+        <Menu.Item>
+         <DownOutlined />
+        </Menu.Item>
+      </Menu>
+    </Dropdown>
       {/* <img src={getLogo(props)} alt={`${APP_NAME} logo`}/> */}
     </div>
   )

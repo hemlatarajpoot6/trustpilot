@@ -76,7 +76,7 @@ export const DefaultDashboard = () => {
               <div className="d-flex justify-content-between align-items-baseline">
                 <span>
                   <h4>Current TrustScore</h4>
-                  <Rate allowHalf defaultValue={2.5} />
+                  3.7<Rate allowHalf defaultValue={2.5} />
                   <h5>Based on 1 reviews</h5>
                 </span>
                 <RightOutlined className="float-right text-center text-muted" />
@@ -149,7 +149,7 @@ export const DefaultDashboard = () => {
           <Card className="ml-3">
           <h4>Add a widget to help customers find your profile</h4>
           <div className="text-center Review-bg">
-          <h5 className="border border-success">Review us on<img src={welcomeimg} className="ml-1" width={80} alt='' /></h5>
+          <h5 className="border border-success"><span>Review us on</span><img src={welcomeimg} className="ml-1" width={80} alt='' style={{marginTop: "-5px"}} /></h5>
           </div>
           <Button type="primary" className="btn-width">View widgets</Button>
           </Card>
