@@ -2,7 +2,7 @@ import React from 'react'
 import RegisterForm from '../../components/RegisterForm'
 import { Row, Col } from "antd";
 import { useSelector } from 'react-redux'
-
+import { Link } from "react-router-dom";
 const backgroundURL = '/img/others/img-17.jpg'
 const backgroundStyle = {
 	backgroundImage: `url(${backgroundURL})`,
@@ -21,7 +21,7 @@ const RegisterTwo = props => {
 						<Row justify="center">
 							<Col xs={24} sm={24} md={20} lg={12} xl={8}>
 								<h1>Sign Up</h1>
-								<p>Already have an account? <a href="/auth/login-2">Sign In</a></p>
+								<p>Already have an account? <Link to="/auth/login-2">Sign In</Link></p>
 								<div className="mt-4">
 									<RegisterForm {...props} />
 								</div>
