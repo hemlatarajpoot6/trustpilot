@@ -2,3 +2,27 @@
     background: #faf7d9 url("../../../../assets/img/0531b739eb7eee4459e9.svg") no-repeat 100% 100%;
     padding: 30px;
 }
+.trust-start{
+    padding: 30px;
+    border: 1px solid #a772ea;
+    margin-top: 20px;
+    background-color: #efebfc;
+}
+.height{
+    height: 100px;
+    background-color: #b2d3f2;
+}
+.card-padding .ant-card-body{
+    padding: 0 !important;
+}
+.check-label{
+    width: 130px;
+}
+.Review-bg{
+    background-color: #efebfc;
+    padding: 20px;
+    margin: 10px;
+}
+.btn-width{
+    width: 100%;
+}
