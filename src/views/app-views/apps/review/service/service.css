@@ -38,3 +38,12 @@ ul{
 .ant-input-group .ant-input{
     font-weight: bold !important;
 }
+/* .ant-select-item-option{
+    padding: 0 !important;
+} */
+.star-option{
+    padding: 0 !important;
+}
+..star-option ul{
+    padding-left: 20px !important;
+}

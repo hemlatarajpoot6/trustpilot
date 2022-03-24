@@ -92,7 +92,7 @@ const Inbox = () => {
                         placeholder="Rating Star"
                         onChange={handleChange}
                     >
-                        <Option value='bad'>
+                        <Option value='bad' className="star-option">
                             <ul>
                                 <li className="d-flex align-items-baseline">
                                     <Checkbox onChange={onChange} className="check-label">Bad</Checkbox>
@@ -100,7 +100,7 @@ const Inbox = () => {
                                 </li>
                             </ul>
                         </Option>
-                        <Option value='poor'>
+                        <Option value='poor' className="star-option">
                             <ul>
                                 <li className="d-flex align-items-baseline">
                                     <Checkbox onChange={onChange} className="check-label">Poor</Checkbox>
@@ -108,7 +108,7 @@ const Inbox = () => {
                                 </li>
                             </ul>
                         </Option>
-                        <Option value='average'>
+                        <Option value='average' className="star-option">
                             <ul>
                                 <li className="d-flex align-items-baseline">
                                     <Checkbox onChange={onChange} className="check-label">Average</Checkbox>
@@ -116,7 +116,7 @@ const Inbox = () => {
                                 </li>
                             </ul>
                         </Option>
-                        <Option value='great'>
+                        <Option value='great' className="star-option">
                             <ul>
                                 <li className="d-flex align-items-baseline">
                                     <Checkbox onChange={onChange} className="check-label">Great</Checkbox>
@@ -124,7 +124,7 @@ const Inbox = () => {
                                 </li>
                             </ul>
                         </Option>
-                        <Option value='excellent'>
+                        <Option value='excellent' className="star-option">
                             <ul>
                                 <li className="d-flex align-items-baseline">
                                     <Checkbox onChange={onChange} className="check-label">Excellent</Checkbox>
