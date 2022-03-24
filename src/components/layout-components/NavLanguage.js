@@ -1,9 +1,10 @@
 import React from "react";
-import { CheckOutlined, GlobalOutlined, DownOutlined  } from '@ant-design/icons';
-import { Menu, Dropdown } from "antd";
+import { QuestionCircleOutlined, DownOutlined, ManOutlined  } from '@ant-design/icons';
+import { Menu, Dropdown, Row, Col } from "antd";
 import lang from "assets/data/language.data.json";
 import { connect } from "react-redux";
 import { onLocaleChange } from 'redux/actions/Theme'
+import { Link } from "react-router-dom";
 
 function getLanguageDetail (locale) {
 	const data = lang.filter(elm => (elm.langId === locale))
@@ -24,24 +25,45 @@ const SelectedLanguage = ({ locale }) => {
 export const NavLanguage = ({ locale, configDisplay, onLocaleChange }) => {
 	const languageOption = (
 		<Menu>
-			{
-				lang.map((elm, i) => {return (
-					<Menu.Item 
-						key={i} 
-						className={locale === elm.langId? 'ant-dropdown-menu-item-active': ''} 
-						onClick={() => onLocaleChange(elm.langId)}
-					>
-						<span className="d-flex justify-content-between align-items-center">
-							<div>
-								<img style={{maxWidth: '20px'}} src={`/img/flags/${elm.icon}.png`} alt={elm.langName}/>
-								<span className="font-weight-normal ml-2">{elm.langName}</span>
-							</div>
-							{locale === elm.langId? <CheckOutlined className="text-success" /> : null}
-						</span>
-					</Menu.Item>
-				)})
-			}
-		</Menu>
+			<Menu.Item>
+				<p className="font-weight-bold">NEED HELP?</p>
+				<Row className="mb-2">
+					<Col xs={24} sm={24} md={24} lg={20}>
+					<Link to="/" className="text-info">Support Center</Link>
+					</Col>
+				<Col xs={24} sm={24} md={24} lg={4}>
+				<ManOutlined className="ml-3 text-info" />
+				</Col>
+				</Row>
+				<Row>
+					<Col xs={24} sm={24} md={24} lg={20}>
+					<Link to="/" className="text-info">Watch video guides</Link>
+					</Col>
+				<Col xs={24} sm={24} md={24} lg={4}>
+				<ManOutlined className="ml-3 text-info" />
+				</Col>
+				</Row>
+			</Menu.Item>
+			</Menu>
+		// <Menu>
+		// 	{
+		// 		lang.map((elm, i) => {return (
+		// 			<Menu.Item 
+		// 				key={i} 
+		// 				className={locale === elm.langId? 'ant-dropdown-menu-item-active': ''} 
+		// 				onClick={() => onLocaleChange(elm.langId)}
+		// 			>
+		// 				<span className="d-flex justify-content-between align-items-center">
+		// 					<div>
+		// 						<img style={{maxWidth: '20px'}} src={`/img/flags/${elm.icon}.png`} alt={elm.langName}/>
+		// 						<span className="font-weight-normal ml-2">{elm.langName}</span>
+		// 					</div>
+		// 					{locale === elm.langId? <CheckOutlined className="text-success" /> : null}
+		// 				</span>
+		// 			</Menu.Item>
+		// 		)})
+		// 	}
+		// </Menu>
 	)
 	return (
 		<Dropdown placement="bottomRight" overlay={languageOption} trigger={["click"]}>
@@ -57,7 +79,7 @@ export const NavLanguage = ({ locale, configDisplay, onLocaleChange }) => {
 					<Menu mode="horizontal">
 						<Menu.Item>
 							<a href="#/" onClick={e => e.preventDefault()}>
-								<GlobalOutlined className="nav-icon mr-0" />
+								<QuestionCircleOutlined className="nav-icon mr-0" />
 							</a>
 						</Menu.Item>
 					</Menu>

@@ -4,8 +4,7 @@ import { connect } from 'react-redux'
 import { 
   EditOutlined, 
   SettingOutlined, 
-  ShopOutlined, 
-  QuestionCircleOutlined, 
+  ShopOutlined,  
   LogoutOutlined 
 } from '@ant-design/icons';
 import Icon from 'components/util-components/Icon';
@@ -13,26 +12,26 @@ import { signOut } from 'redux/actions/Auth';
 
 const menuItem = [
 	{
-		title: "Edit Profile",
+		title: "Personal account",
 		icon: EditOutlined ,
 		path: "/"
     },
     
     {
-		title: "Account Setting",
+		title: "Email notifications",
 		icon: SettingOutlined,
 		path: "/"
     },
     {
-		title: "Billing",
+		title: "Cookie preferences",
 		icon: ShopOutlined ,
 		path: "/"
-	},
-    {
-		title: "Help Center",
-		icon: QuestionCircleOutlined,
-		path: "/"
 	}
+  //   {
+	// 	title: "Help Center",
+	// 	icon: QuestionCircleOutlined,
+	// 	path: "/"
+	// }
 ]
 
 export const NavProfile = ({signOut}) => {
@@ -63,7 +62,7 @@ export const NavProfile = ({signOut}) => {
           <Menu.Item key={menuItem.length + 1} onClick={e => signOut()}>
             <span>
               <LogoutOutlined className="mr-3"/>
-              <span className="font-weight-normal">Sign Out</span>
+              <span className="font-weight-normal">Log out</span>
             </span>
           </Menu.Item>
         </Menu>

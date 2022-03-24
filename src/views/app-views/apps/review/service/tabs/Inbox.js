@@ -1,8 +1,10 @@
-import { Col, Row, Input, Select, DatePicker, Button, Card, Comment, Avatar, Form, Tabs, Checkbox, Progress, Divider } from "antd";
-import { FacebookFilled, TwitterCircleFilled, LinkedinFilled } from "@ant-design/icons"
+import { Col, Row, Input, Select, Modal, Collapse, DatePicker, Button, Rate, Card, Comment, Avatar, Form, Tabs, Checkbox, Divider } from "antd";
+import { FacebookFilled, TwitterCircleFilled, LinkedinFilled, CheckCircleFilled } from "@ant-design/icons"
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../service.css"
+import star from "../../../../../../assets/img/stars-5.svg";
+import modalimage from "../../../../../../assets/img/b165e328827af07bf60e.svg"
 
 
 
@@ -12,10 +14,25 @@ const Inbox = () => {
     const { Option } = Select;
     const { TextArea } = Input;
     const { TabPane } = Tabs;
+    const { Panel } = Collapse;
 
     function onChange(e) {
         console.log(`checked = ${e.target.checked}`);
     }
+
+    const [isModalVisible, setIsModalVisible] = useState(false);
+
+    const showModal = () => {
+        setIsModalVisible(true);
+    };
+
+    const handleOk = () => {
+        setIsModalVisible(false);
+    };
+
+    const handleCancel = () => {
+        setIsModalVisible(false);
+    };
 
 
     const [copied, setCopied] = useState(false);
@@ -29,7 +46,7 @@ const Inbox = () => {
         document.body.removeChild(el);
         setCopied(true);
     }
- 
+
     const [value, setValue] = useState('');
     console.log('value', value);
 
@@ -40,7 +57,7 @@ const Inbox = () => {
             </Form.Item>
             <Form.Item>
                 <Button htmlType="submit" type="primary">
-                    Add Comment
+                Post reply
                 </Button>
             </Form.Item>
         </>
@@ -49,7 +66,7 @@ const Inbox = () => {
         console.log(value);
     }
 
- const handleChangesecond = (e) =>{
+    const handleChangesecond = (e) => {
         setValue(e.target.value);
     }
 
@@ -66,99 +83,233 @@ const Inbox = () => {
             <Row>
                 <Col xs={24} sm={24} md={24} lg={24}>
                     <Search placeholder="input search text"
-                        style={{ width: '15%' }} className="mr-1" onSearch={onSearch} />
+                        style={{ width: '15%' }} className="mr-1 font-weight-bold" onSearch={onSearch} />
                     <Select
-                        className="mr-1 select-option mb-2"
+                        className="mr-1 select-option mb-2 font-weight-bold"
                         mode="multiple"
                         allowClear
                         style={{ width: '10%' }}
                         placeholder="Rating Star"
                         onChange={handleChange}
                     >
-                        <Option>
+                        <Option value='bad'>
                             <ul>
                                 <li className="d-flex align-items-baseline">
-                                    <Checkbox onChange={onChange} className="check-label">Poor</Checkbox>
-                                    <Progress percent={70} className="progress" />
+                                    <Checkbox onChange={onChange} className="check-label">Bad</Checkbox>
+                                    <Rate defaultValue={1} />
                                 </li>
                             </ul>
                         </Option>
-                        <Option>
+                        <Option value='poor'>
                             <ul>
                                 <li className="d-flex align-items-baseline">
                                     <Checkbox onChange={onChange} className="check-label">Poor</Checkbox>
-                                    <Progress percent={70} className="progress" />
+                                    <Rate defaultValue={2} />
                                 </li>
                             </ul>
                         </Option>
-                        <Option>
+                        <Option value='average'>
                             <ul>
                                 <li className="d-flex align-items-baseline">
-                                    <Checkbox onChange={onChange} className="check-label">Poor</Checkbox>
-                                    <Progress percent={70} className="progress" />
+                                    <Checkbox onChange={onChange} className="check-label">Average</Checkbox>
+                                    <Rate defaultValue={3} />
                                 </li>
                             </ul>
                         </Option>
-
+                        <Option value='great'>
+                            <ul>
+                                <li className="d-flex align-items-baseline">
+                                    <Checkbox onChange={onChange} className="check-label">Great</Checkbox>
+                                    <Rate defaultValue={4} />
+                                </li>
+                            </ul>
+                        </Option>
+                        <Option value='excellent'>
+                            <ul>
+                                <li className="d-flex align-items-baseline">
+                                    <Checkbox onChange={onChange} className="check-label">Excellent</Checkbox>
+                                    <Rate defaultValue={5} />
+                                </li>
+                            </ul>
+                        </Option>
+                        <Button>Apply</Button>
                     </Select>
-                    <Select
-                        className="mr-1"
-                        mode="multiple"
+                    <Select className="mr-1"
                         allowClear
                         style={{ width: '10%' }}
-                        placeholder="Reply"
                         onChange={handleChange}
+                        placeholder="Reply"
                     >
-                        <Option>gbg</Option>
+                        <Option value="male">
+                            Reviews <b>with a reply</b>
+                        </Option>
+                        <Option value="female">
+                            Reviews <b>without a reply</b>
+                        </Option>
+                        <Button>Apply</Button>
                     </Select>
                     <DatePicker className="mr-1" renderExtraFooter={() => 'extra footer'} />
-                    <Select
-                        className="mr-1"
-                        mode="multiple"
+                    <Select className="mr-1"
                         allowClear
+                        mode="multiple"
                         style={{ width: '10%' }}
+                        onChange={handleChange}
                         placeholder="Language"
-                        onChange={handleChange}
                     >
-                        <Option></Option>
+                        <Option value="english">
+                            English(1)
+                        </Option>
+                        <Button>Apply</Button>
                     </Select>
-                    <Select
-                        className="mr-1"
-                        mode="multiple"
+                    <Select className="mr-1"
                         allowClear
                         style={{ width: '10%' }}
+                        onChange={handleChange}
                         placeholder="Flag"
-                        onChange={handleChange}
                     >
-                        <Option></Option>
+                        <Option value="flagged">
+                            Reviews <b>flagged</b>
+                        </Option>
+                        <Option value="notflaged">
+                            Reviews <b>not flagged</b>
+                        </Option>
+                        <Button>Apply</Button>
                     </Select>
-                    <Select
-                        className="mr-1"
-                        mode="multiple"
+                    <Select className="mr-1"
                         allowClear
                         style={{ width: '10%' }}
+                        onChange={handleChange}
                         placeholder="Find reviewer"
-                        onChange={handleChange}
                     >
-                        <Option></Option>
+                        <Option value="contacted">
+                            Reviewer  <b>contacted</b>
+                        </Option>
+                        <Option value="notcontacted">
+                            Reviewer <b>not contacted</b>
+                        </Option>
+                        <Option value="replied">
+                            Reviewer <b>replied</b>
+                        </Option>
+                        <Button>Apply</Button>
                     </Select>
-                    <Select
-                        className="mr-1"
-                        mode="multiple"
+                    <Select className="mr-1"
                         allowClear
                         style={{ width: '10%' }}
-                        placeholder="Source"
                         onChange={handleChange}
+                        placeholder="Source"
                     >
-                        <Option></Option>
+                        <Option value="Automatic">
+                            Automatic Invitation
+                        </Option>
+                        <Option value="Manual">
+                            Manual Invitation
+                        </Option>
+                        <Option value="Organic">
+                            Organic
+                        </Option>
+                        <Option value="Generated">
+                            Generated Link
+                        </Option>
+                        <Option value="Basic">
+                            Basic Invitation
+                        </Option>
+                        <Option value="Embedded">
+                            Embedded Review Form
+                        </Option>
+                        <Button>Apply</Button>
                     </Select>
-                    <Button>Export</Button>
+                    <Button className="font-weight-bold text-dark" onClick={showModal}>Export</Button>
+                    <Modal title="Export your reviews" width={1000} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+                        <Card>
+                            <Row>
+                                <Col xs={24} sm={24} md={24} lg={18}>
+                                    <h4>This feature is part of the Enhance add-on module. You can unlock it by upgrading your plan.</h4>
+                                </Col>
+                                <Col xs={24} sm={24} md={24} lg={6}>
+                                    <Button type="primary">Upgrade to access</Button>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col xs={24} sm={24} md={24} lg={24}>
+                                    <Collapse accordion>
+                                        <Panel header="Show all features in the Enhance add-on module" key="1">
+                                            <h5 className="pb-2">The add-on module includes:</h5>
+                                            <Row>
+                                                <Col xs={24} sm={24} md={24} lg={8}>
+                                                    <ul className="unstyled">
+                                                        <div className="d-flex">
+                                                            <CheckCircleFilled className="text-success mr-3 mt-1" />
+                                                            <div>
+                                                                <li className="list-box">
+                                                                     <b>Promotion and guarantee content boxes</b> 
+                                                                     to build brand awareness on your Trustpilot public profile
+                                                                </li>
+                                                            </div>
+                                                        </div>
+                                                        <div className="d-flex">
+                                                            <CheckCircleFilled className="text-success mr-3 mt-1" />
+                                                            <div>
+                                                                <li className="list-box">
+                                                                     <b>Advanced analytics</b> 
+                                                                     to track Google organic search performance and invitation-to-review conversion
+                                                                </li>
+                                                            </div>
+                                                        </div>
+                                                    </ul>
+                                                </Col>
+                                                <Col xs={24} sm={24} md={24} lg={8}>
+                                                    <ul>
+                                                        <div className="d-flex">
+                                                            <CheckCircleFilled className="text-success mr-3 mt-1" />
+                                                            <div>
+                                                                <li className="list-box">
+                                                                    <b>Facebook Like content box</b> 
+                                                                    to highlight your Facebook page on your Trustpilot public profile
+                                                                </li>
+                                                            </div>
+                                                        </div>
+                                                        <div className="d-flex">
+                                                            <CheckCircleFilled className="text-success mr-3 mt-1" />
+                                                            <div>
+                                                                <li className="list-box">
+                                                                    <b>Export review data</b> 
+                                                                    to share and analyze with team members in your company
+                                                                </li>
+                                                            </div>
+                                                        </div>
+                                                    </ul>
+                                                </Col>
+                                                <Col xs={24} sm={24} md={24} lg={8}>
+                                                    <ul>
+                                                        <div className="d-flex">
+                                                            <CheckCircleFilled className="text-success mr-3 mt-1" />
+                                                            <div>
+                                                                <li className="list-box"> <b>Customized review invitations</b> to add your company’s logo and branding</li>
+                                                            </div>
+                                                        </div>
+                                                    </ul>
+                                                </Col>
+                                            </Row>
+                                        </Panel>
+                                    </Collapse>
+                                    <div className="background-color m-4">
+                                        <img src={modalimage} alt="modalimage" />
+                                        <h4 className="mt-3">Transform good teams into great ones</h4>
+                                        <h5 className="mt-3">Export review data into a CSV file to share customer feedback and build better experiences across all departments of your company.</h5>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Card>
+                    </Modal>
                 </Col>
             </Row>
             <Row className="mt-3">
                 <Col xs={24} sm={24} md={24} lg={6}>
                     <div className="p-4 border-right mr-2">
-                        <h4>Awaiting reply</h4>
+                        <span className="d-flex justify-content-between">
+                            <h4>Awaiting reply</h4>
+                            <h4>1</h4>
+                        </span>
                         <table className="table">
                             <tr>
                                 <th className="px-5 py-2">1-star reviews</th>
@@ -185,11 +336,12 @@ const Inbox = () => {
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={18}>
                     <Card>
+                        <img src={star} alt="star" width={130} className="mb-2" />
                         <h4>Great Product Deliveries</h4>
                         <p>We worked with Engineer Master Team and we got a great product from them we still doing maintenance job with them.</p>
                         <p>by<span>Style Cabbie</span></p>
                         <p>Source: <span>Organic</span></p>
-                        <Tabs defaultActiveKey="1" onChange={callback}>
+                        <Tabs defaultActiveKey="1" className="ssssssssssssssssss" onChange={callback}>
                             <TabPane tab="Reply" key="1">
                                 {/* {comments.length > 0 && <CommentList comments={comments} />} */}
                                 <Comment

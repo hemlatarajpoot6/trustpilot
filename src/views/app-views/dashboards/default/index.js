@@ -76,7 +76,7 @@ export const DefaultDashboard = () => {
               <div className="d-flex justify-content-between align-items-baseline">
                 <span>
                   <h4>Current TrustScore</h4>
-                  3.7<Rate allowHalf defaultValue={2.5} />
+                 <b className="mr-2">3.7</b><Rate allowHalf defaultValue={2.5} />
                   <h5>Based on 1 reviews</h5>
                 </span>
                 <RightOutlined className="float-right text-center text-muted" />
@@ -141,7 +141,7 @@ export const DefaultDashboard = () => {
           <Card className="mr-3">
            <h4>How many people have viewed your profile?</h4>
            <p>Since Feb 23, 2022, you’ve received</p>
-           <h5><span className="h3">18</span>views</h5>
+           <h5><span className="h3 mr-2">18</span>views</h5>
            <Button type="primary" className="btn-width">See who’s looking at your profile</Button>
           </Card>
         </Col>

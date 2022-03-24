@@ -1,3 +1,40 @@
-.select-option.ant-select-dropdown{
+.ant-select-dropdown{
     width: 20% !important;
+}
+.background-color{
+    background-color: rgb(242, 242, 245);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 55px 25px;
+}
+.ant-select-selection-placeholder{
+    font-weight: bold;
+    color: black;
+}
+.ant-select-selection-placeholder:hover{
+    color: blue !important;
+}
+#rc-tabs-0-tab-1{
+    font-weight: bold;
+}
+#rc-tabs-0-tab-2{
+    font-weight: bold;
+}
+#rc-tabs-0-tab-3{
+    font-weight: bold;
+}
+ul{
+    list-style: none;
+}
+.list-box{
+    margin: 0px 0px 40px 10px;
+    font-size: 19px;
+}
+.ant-picker-input>input::placeholder {
+    font-weight: bold;
+    color: black;
+ }
+.ant-input-group .ant-input{
+    font-weight: bold !important;
 }
