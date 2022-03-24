@@ -15,12 +15,12 @@
 .ant-select-selection-placeholder:hover{
     color: blue !important;
 }
-#rc-tabs-0-tab-1{
+.ant-tabs-tab-btn{
     font-weight: bold;
 }
-#rc-tabs-0-tab-2{
+/* #rc-tabs-0-tab-2{
     font-weight: bold;
-}
+} */
 #rc-tabs-0-tab-3{
     font-weight: bold;
 }

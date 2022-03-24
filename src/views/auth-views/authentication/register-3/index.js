@@ -145,11 +145,11 @@ const SecondRegister = () => {
                                     <h1>Review</h1>
                                     <ul className="p-0" style={{listStyle: "none"}}>
                                         <li className="d-flex align-items-baseline">
-                                            <Checkbox onChange={onChange} className="check-label">Bad</Checkbox>
+                                            <Checkbox onChange={onChange} className="check-label">Excellent</Checkbox>
                                             <Progress percent={100} className="progress" />
                                         </li>
                                         <li className="d-flex align-items-baseline">
-                                            <Checkbox onChange={onChange} className="check-label">Poor</Checkbox>
+                                            <Checkbox onChange={onChange} className="check-label">Great</Checkbox>
                                             <Progress percent={70} className="progress" />
                                         </li>
                                         <li className="d-flex align-items-baseline">
@@ -157,11 +157,11 @@ const SecondRegister = () => {
                                             <Progress percent={50} className="progress" />
                                         </li>
                                         <li className="d-flex align-items-baseline">
-                                            <Checkbox onChange={onChange} className="check-label">Great</Checkbox>
+                                            <Checkbox onChange={onChange} className="check-label">Poor</Checkbox>
                                             <Progress percent={20} className="progress" />
                                         </li>
                                         <li className="d-flex align-items-baseline">
-                                            <Checkbox onChange={onChange} className="check-label">Excellent</Checkbox>
+                                            <Checkbox onChange={onChange} className="check-label">Bad</Checkbox>
                                             <Progress percent={0} className="progress" />
                                         </li>
                                     </ul>

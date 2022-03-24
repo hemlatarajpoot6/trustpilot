@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="210px" height="131px" viewBox="0 0 210 131" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>ic-empty-ReportingActivity</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Reporting-overview" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="reportedReviews-empty" transform="translate(-722.000000, -356.000000)">
+            <g id="Group-5" transform="translate(633.000000, 357.000000)">
+                <g id="ic-empty-ReportingActivity" transform="translate(90.000000, 0.000000)">
+                    <g id="Group-2" transform="translate(49.000000, 17.000000)">
+                        <rect id="Rectangle" fill="#EFF6FC" fill-rule="nonzero" x="0" y="90" width="110" height="23" rx="11.5"></rect>
+                        <polyline id="Path" stroke="#368CD7" fill="#FFFFFF" stroke-linecap="square" points="69.8571429 5 91 5 91 100 17 100 17 5 17 5 38.1428571 5"></polyline>
+                        <path d="M64.6666667,11 L43.3333333,11 C40.3878147,11 38,8.53756613 38,5.5 C38,2.46243387 40.3878147,0 43.3333333,0 L64.6666667,0 C67.6121851,0 70,2.46243387 70,5.5 C70,8.53756613 67.6121851,11 64.6666667,11 Z" id="Path" stroke="#368CD7" fill="#EFF6FC" stroke-linecap="square"></path>
+                        <path d="M29.5,34.5 L76.9590643,34.5" id="Line" stroke="#368CD7" stroke-linecap="square" fill-rule="nonzero"></path>
+                        <path d="M29.5,44.5 L76.9590643,44.5" id="Line-Copy" stroke="#368CD7" stroke-linecap="square" fill-rule="nonzero"></path>
+                        <path d="M29.5,54.5 L76.9590643,54.5" id="Line-Copy-2" stroke="#368CD7" stroke-linecap="square" fill-rule="nonzero"></path>
+                        <path d="M29.5,64.5 L76.9590643,64.5" id="Line-Copy-3" stroke="#368CD7" stroke-linecap="square" fill-rule="nonzero"></path>
+                        <path d="M29.5,74.5 L56.959064,74.5" id="Line-Copy-4" stroke="#368CD7" stroke-linecap="square" fill-rule="nonzero"></path>
+                    </g>
+                    <g id="Group" stroke="#368CD7" stroke-linecap="square">
+                        <g id="flag" transform="translate(21.000000, 0.000000)">
+                            <path d="M0,32 L0,22 C2.666,19.334 6,18 10,18 C16,18 18,22 22,22 C24,22 26,21.334 28,20 L28,2 C26,3.334 24,4 22,4 C18,4 16,0 10,0 C6,0 2.666,1.334 0,4 L0,22" id="Path"></path>
+                        </g>
+                        <g id="flag-copy-3" transform="translate(180.000000, 66.000000)">
+                            <path d="M0,32 L0,22 C2.666,19.334 6,18 10,18 C16,18 18,22 22,22 C24,22 26,21.334 28,20 L28,2 C26,3.334 24,4 22,4 C18,4 16,0 10,0 C6,0 2.666,1.334 0,4 L0,22" id="Path"></path>
+                        </g>
+                        <g id="flag-copy" transform="translate(164.000000, 23.000000)" fill="#EFF6FC">
+                            <path d="M0,24 L0,16.5 C1.9995,14.5005 4.5,13.5 7.5,13.5 C12,13.5 13.5,16.5 16.5,16.5 C18,16.5 19.5,16.0005 21,15 L21,1.5 C19.5,2.5005 18,3 16.5,3 C13.5,3 12,0 7.5,0 C4.5,0 1.9995,1.0005 0,3 L0,16.5" id="Path"></path>
+                        </g>
+                        <g id="flag-copy-2" transform="translate(0.000000, 68.000000)" fill="#EFF6FC">
+                            <path d="M0,24 L0,16.5 C1.9995,14.5005 4.5,13.5 7.5,13.5 C12,13.5 13.5,16.5 16.5,16.5 C18,16.5 19.5,16.0005 21,15 L21,1.5 C19.5,2.5005 18,3 16.5,3 C13.5,3 12,0 7.5,0 C4.5,0 1.9995,1.0005 0,3 L0,16.5" id="Path"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

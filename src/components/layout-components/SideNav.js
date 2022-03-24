@@ -21,6 +21,7 @@ export const SideNav = ({navCollapsed, sideNavTheme, routeInfo, hideGroupTitle, 
           {...props}
         />
       </Scrollbars>
+      <p className="text-dark">hello</p>
     </Sider>
   )
 }

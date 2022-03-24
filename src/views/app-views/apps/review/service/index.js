@@ -1,6 +1,7 @@
 import React from "react";
 import { Tabs } from 'antd';
 import Inbox from "./tabs/Inbox";
+import Flagging from "./tabs/Flagging";
 
 const review = () =>{
 
@@ -17,7 +18,7 @@ const { TabPane } = Tabs;
         <Inbox />
         </TabPane>
         <TabPane tab="Flagging activity" key="2">
-          Content of Tab Pane 2
+         <Flagging />
         </TabPane>
       </Tabs>
     )

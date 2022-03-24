@@ -47,8 +47,8 @@ const Inbox = () => {
         setCopied(true);
     }
 
-    const [value, setValue] = useState('');
-    console.log('value', value);
+    // const [value, setValue] = useState('');
+
 
     const Editor = ({ onChange, value }) => (
         <>
@@ -66,9 +66,9 @@ const Inbox = () => {
         console.log(value);
     }
 
-    const handleChangesecond = (e) => {
-        setValue(e.target.value);
-    }
+    // const handleChangesecond = (e) => {
+    //     setValue(e.target.value);
+    // }
 
     const onSearch = value => console.log(value);
 
@@ -308,7 +308,7 @@ const Inbox = () => {
                     <div className="p-4 border-right mr-2">
                         <span className="d-flex justify-content-between">
                             <h4>Awaiting reply</h4>
-                            <h4>1</h4>
+                            <h4 className="mr-2">1</h4>
                         </span>
                         <table className="table">
                             <tr>
@@ -341,15 +341,13 @@ const Inbox = () => {
                         <p>We worked with Engineer Master Team and we got a great product from them we still doing maintenance job with them.</p>
                         <p>by<span>Style Cabbie</span></p>
                         <p>Source: <span>Organic</span></p>
-                        <Tabs defaultActiveKey="1" className="ssssssssssssssssss" onChange={callback}>
+                        <Tabs defaultActiveKey="1" onChange={callback}>
                             <TabPane tab="Reply" key="1">
                                 {/* {comments.length > 0 && <CommentList comments={comments} />} */}
                                 <Comment
                                     avatar={<Avatar src="https://joeschmoe.io/api/v1/random" alt="Han Solo" />}
                                     content={
                                         <Editor
-                                            onChange={(e) => handleChangesecond(e)}
-                                            value={value}
                                         />
                                     }
                                 />

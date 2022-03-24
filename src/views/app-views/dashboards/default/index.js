@@ -76,7 +76,7 @@ export const DefaultDashboard = () => {
               <div className="d-flex justify-content-between align-items-baseline">
                 <span>
                   <h4>Current TrustScore</h4>
-                 <b className="mr-2">3.7</b><Rate allowHalf defaultValue={2.5} />
+                 <b className="mr-2 h3">3.7</b><Rate allowHalf defaultValue={2.5} />
                   <h5>Based on 1 reviews</h5>
                 </span>
                 <RightOutlined className="float-right text-center text-muted" />
