@@ -95,7 +95,7 @@ const Inbox = () => {
                         <Option value='bad' className="star-option">
                             <ul>
                                 <li className="d-flex align-items-baseline">
-                                    <Checkbox onChange={onChange} className="check-label">Bad</Checkbox>
+                                    <Checkbox onChange={onChange} className="check-label aaaaaaaaaaaaaaaaaaaaaaaaaaaa">Bad</Checkbox>
                                     <Rate defaultValue={1} />
                                 </li>
                             </ul>
@@ -103,7 +103,7 @@ const Inbox = () => {
                         <Option value='poor' className="star-option">
                             <ul>
                                 <li className="d-flex align-items-baseline">
-                                    <Checkbox onChange={onChange} className="check-label">Poor</Checkbox>
+                                    <Checkbox onChange={onChange} className="check-label aaaaaaaaaaaaaaaaaaaaaaaaaaaa">Poor</Checkbox>
                                     <Rate defaultValue={2} />
                                 </li>
                             </ul>
@@ -111,7 +111,7 @@ const Inbox = () => {
                         <Option value='average' className="star-option">
                             <ul>
                                 <li className="d-flex align-items-baseline">
-                                    <Checkbox onChange={onChange} className="check-label">Average</Checkbox>
+                                    <Checkbox onChange={onChange} className="check-label aaaaaaaaaaaaaaaaaaaaaaaaaaaa">Average</Checkbox>
                                     <Rate defaultValue={3} />
                                 </li>
                             </ul>
@@ -119,7 +119,7 @@ const Inbox = () => {
                         <Option value='great' className="star-option">
                             <ul>
                                 <li className="d-flex align-items-baseline">
-                                    <Checkbox onChange={onChange} className="check-label">Great</Checkbox>
+                                    <Checkbox onChange={onChange} className="check-label aaaaaaaaaaaaaaaaaaaaaaaaaaaa">Great</Checkbox>
                                     <Rate defaultValue={4} />
                                 </li>
                             </ul>
@@ -127,7 +127,7 @@ const Inbox = () => {
                         <Option value='excellent' className="star-option">
                             <ul>
                                 <li className="d-flex align-items-baseline">
-                                    <Checkbox onChange={onChange} className="check-label">Excellent</Checkbox>
+                                    <Checkbox onChange={onChange} className="check-label aaaaaaaaaaaaaaaaaaaaaaaaaaaa">Excellent</Checkbox>
                                     <Rate defaultValue={5} />
                                 </li>
                             </ul>

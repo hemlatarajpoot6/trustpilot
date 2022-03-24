@@ -179,6 +179,22 @@ export const RegisterForm = (props) => {
 					<Input addonAfter={selectAfter} placeholder='Work email' />
 				</Form.Item>
 				<Form.Item
+					name="password"
+					hasFeedback
+					onChange={(e) => onHandleChange(e)}
+					value={userRegister.password}
+				>
+					<Input placeholder='Enter Password' />
+				</Form.Item>
+				<Form.Item
+					name="confirm_password"
+					hasFeedback
+					onChange={(e) => onHandleChange(e)}
+					value={userRegister.confirm_password}
+				>
+					<Input placeholder='Enter Confirm Password' />
+				</Form.Item>
+				<Form.Item
 					name="phone_number"
 					hasFeedback
 					onChange={(e) => onHandleChange(e)}
