@@ -44,6 +44,6 @@ ul{
 .star-option{
     padding: 0 !important;
 }
-..star-option ul{
+.star-option ul{
     padding-left: 20px !important;
 }
