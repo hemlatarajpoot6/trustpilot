@@ -1,7 +1,6 @@
 import { Col, Row, Input, Select, DatePicker, Button, Card, Comment, Avatar, Form, Tabs, Checkbox, Progress, Divider } from "antd";
 import { FacebookFilled, TwitterCircleFilled, LinkedinFilled } from "@ant-design/icons"
 import React, { useState } from "react";
-// import moment from 'moment';
 import { Link } from "react-router-dom";
 import "../service.css"
 
@@ -30,26 +29,9 @@ const Inbox = () => {
         document.body.removeChild(el);
         setCopied(true);
     }
-    // const [comments, setComments] = useState([]);
-    // const [submitting, setSubmitting] = useState(false);
+ 
     const [value, setValue] = useState('');
     console.log('value', value);
-
-    // const handleSubmit = () => {
-    //     if (value) {
-    //         setSubmitting(true);
-    //     }
-
-    // }
-
-    // const CommentList = ({ comments }) => (
-    //     <List
-    //         dataSource={comments}
-    //         header={`${comments.length} ${comments.length > 1 ? 'replies' : 'reply'}`}
-    //         itemLayout="horizontal"
-    //         renderItem={props => <Comment {...props} />}
-    //     />
-    // );
 
     const Editor = ({ onChange, value }) => (
         <>
@@ -63,29 +45,11 @@ const Inbox = () => {
             </Form.Item>
         </>
     );
-
-    // const children = [];
-    // children.push(<><Option >
-    //     <ul className="p-0" style={{ listStyle: "none" }}>
-    //         <li className="d-flex align-items-baseline">
-    //             <Checkbox onChange={onChange} className="check-label">Bad</Checkbox>
-    //             <Progress percent={100} className="progress" />
-    //         </li>
-    //     </ul>
-    // </Option>
-    //     <Option >
-    //         <ul className="p-0" style={{ listStyle: "none" }}>
-    //             <li className="d-flex align-items-baseline">
-    //                 <Checkbox onChange={onChange} className="check-label">Poor</Checkbox>
-    //                 <Progress percent={70} className="progress" />
-    //             </li>
-    //         </ul>
-    //     </Option></>);
     function handleChange(value) {
         console.log(value);
     }
 
-    function handleChangesecond(e) {
+ const handleChangesecond = (e) =>{
         setValue(e.target.value);
     }
 
