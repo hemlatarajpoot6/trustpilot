@@ -3,34 +3,70 @@ import React from "react";
 import { Link } from "react-router-dom";
 import qandaimage from "../../../../../../assets/img/18c40f7307ae05ba135c.png"
 import "../../service/service.css";
+import { CheckCircleFilled } from "@ant-design/icons"
 
-const QandA = () =>{
+const QandA = () => {
 
-    return(
+    return (
         <React.Fragment>
             <Row>
                 <Col xs={24} sm={24} md={24} lg={12}>
-                    <Card>
+                    <Card className="mr-3">
                         <div className="background-color">
-                            <img src={qandaimage} alt='q&aimg' />
-                            <h1>Decrease customer hesitation</h1>
-                            <h4>Make it easy for new customers to ask their product questions and provide them with answers – straight from your product page.</h4>
+                            <img src={qandaimage} alt='q&aimg' className="mt-5 mb-5" />
+                            <h1 className="mb-3">Decrease customer hesitation</h1>
+                            <h4 className="mb-5">Make it easy for new customers to ask their product questions and provide them with answers – straight from your product page.</h4>
                         </div>
                     </Card>
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={12}>
-                <Card>
+                    <Card className="ml-3">
                         <div>
                             <h3>This feature is part of the Product Reviews add-on module. You can unlock it by upgrading your plan.</h3>
                             <Divider />
                             <h5>The add-on module includes:</h5>
                             <ul>
-                                <li>Product TrustBoxes to showcase reviews on your product and category pages</li>
-                                <li>Rich snippet stars to stand out in organic search results</li>
-                                <li>User-generated photos in product reviews you can showcase on your site and in your marketing materials</li>
-                                <li>Google Seller Ratings for product ads to increase traffic and sales</li>
-                                <li>Import existing third-party product reviews for a head start on your collection</li>
-                                <Link to="/#"><Button>Upgrade to access</Button></Link>
+                                <div className="d-flex mt-3">
+                                    <CheckCircleFilled className="text-success mr-3 mt-1" />
+                                    <div>
+                                        <li className="list-box-product">
+                                           <b> Product TrustBoxes</b> to showcase reviews on your product and category pages
+                                        </li>
+                                    </div>
+                                </div>
+                                <div className="d-flex">
+                                    <CheckCircleFilled className="text-success mr-3 mt-1" />
+                                    <div>
+                                        <li className="list-box-product">
+                                        <b>Rich snippet stars</b> to stand out in organic search results
+                                        </li>
+                                    </div>
+                                </div>
+                                <div className="d-flex">
+                                    <CheckCircleFilled className="text-success mr-3 mt-1" />
+                                    <div>
+                                        <li className="list-box-product">
+                                       <b> User-generated photos in product reviews</b> you can showcase on your site and in your marketing materials
+                                        </li>
+                                    </div>
+                                </div>
+                                <div className="d-flex">
+                                    <CheckCircleFilled className="text-success mr-3 mt-1" />
+                                    <div>
+                                        <li className="list-box-product">
+                                       <b> Google Seller Ratings for product ads</b> to increase traffic and sales
+                                        </li>
+                                    </div>
+                                </div>
+                                <div className="d-flex">
+                                    <CheckCircleFilled className="text-success mr-3 mt-1" />
+                                    <div>
+                                        <li className="list-box-product">
+                                        <b>Import existing third-party product reviews</b> for a head start on your collection
+                                        </li>
+                                    </div>
+                                </div>
+                                <Link to="/app/apps/review/upgrade"><Button type="primary">Upgrade to access</Button></Link>
                             </ul>
                         </div>
                     </Card>

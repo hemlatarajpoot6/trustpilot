@@ -1,5 +1,5 @@
 .ant-select-dropdown{
-    width: 20% !important;
+    width: 25% !important;
 }
 .background-color{
     background-color: rgb(242, 242, 245);
@@ -46,8 +46,12 @@ ul{
 }
 .star-option ul{
     padding-left: 20px !important;
-    margin-right: 40px !important;
+    margin-right: 20px !important;
 }
-.check-label{
+.checkbox-label{
     width: 130px !important
+}
+.list-box-product{
+    margin: 0px 0px 20px 10px;
+    font-size: 15px;
 }
