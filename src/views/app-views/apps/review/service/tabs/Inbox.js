@@ -127,7 +127,7 @@ const Inbox = () => {
                         <Option value='excellent' className="star-option">
                             <ul>
                                 <li className="d-flex align-items-baseline">
-                                    <Checkbox onChange={onChange} className="aaaaaaaaaaaaaaaaaaaaaaaaaaaa">Excellent</Checkbox>
+                                    <Checkbox onChange={onChange} className="checkbox-label">Excellent</Checkbox>
                                     <Rate defaultValue={5} />
                                 </li>
                             </ul>

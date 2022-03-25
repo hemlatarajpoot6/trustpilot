@@ -15,7 +15,7 @@ const Upgrade = () =>{
                    </div>
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={8}>
-                    <div className="text-center">
+                    <div className="d-flex justify-content-center">
                     <p>Standard subscription required</p>
                     <Link>What’s included?</Link><br />
                     <Button type="primary">Contact us</Button>
