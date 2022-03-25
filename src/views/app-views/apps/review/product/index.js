@@ -2,6 +2,7 @@ import React from "react";
 import { Tabs } from 'antd';
 import Inbox from "./tabs/Inbox";
 import QandA from "./tabs/Q&A";
+import ProductCatalog from "./tabs/ProductCatalog";
 
 const Product = () =>{
 
@@ -21,7 +22,7 @@ function callback(key) {
        <QandA />
         </TabPane>
         <TabPane tab="Product catalog" key="3">
-          Content of Tab Pane 2
+          <ProductCatalog />
         </TabPane>
         <TabPane tab="Product attributes" key="4">
           Content of Tab Pane 2
