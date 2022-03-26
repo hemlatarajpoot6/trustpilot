@@ -109,7 +109,7 @@ const Upgrade = () => {
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={8} className="d-flex align-items-center">
                     <div>
-                        <p>Standard subscription required</p>
+                        <p className="h3 text-muted">Standard subscription required</p>
                         <Link className="my-5">What’s included?</Link><br />
                         <Button type="primary" onClick={contactModal} className="mt-4 Contact">Contact us</Button>
                         <Modal
@@ -192,20 +192,15 @@ const Upgrade = () => {
                                 <h4>This add-on module includes:</h4>
                                 <ul>
                                     <li className="list">
-                                        <b>Promotion and guarantee content boxes </b>
-                                        to build brand awareness on your Trustpilot public profile</li>
+                                        <b>Promotion and guarantee content boxes </b> to build brand awareness on your Trustpilot public profile</li>
                                     <li className="list">
-                                        <b>Facebook Like content box</b>
-                                        to highlight your Facebook page on your Trustpilot public profile</li>
+                                        <b>Facebook Like content box</b> to highlight your Facebook page on your Trustpilot public profile</li>
                                     <li className="list">
-                                        <b>Customized review invitations</b>
-                                        to add your company’s logo and branding</li>
+                                        <b>Customized review invitations</b>  to add your company’s logo and branding</li>
                                     <li className="list">
-                                        <b>Advanced analytics</b>
-                                        to track Google organic search performance and invitation-to-review conversion</li>
+                                        <b>Advanced analytics</b>  to track Google organic search performance and invitation-to-review conversion</li>
                                     <li className="list">
-                                        <b>Export review data</b>
-                                        to share and analyze with team members in your company</li>
+                                        <b>Export review data</b>  to share and analyze with team members in your company</li>
                                 </ul>
                             </Modal>
                         </Card>
@@ -296,8 +291,8 @@ const Upgrade = () => {
                                     <li className="list"><b>A dedicated Customer Success Manager</b> who will develop your review strategy with you</li>
                                     <li className="list"><b>Best practice consultation</b> to get you started on the right foot</li>
                                     <li className="list"><b>Reputation management advice</b></li>
-                                    <li><b>Technical assistance</b> from our Implementation Managers and Support Engineers</li>
-                                    <li><b>More support options</b> including chat, callback, and live onboarding</li>
+                                    <li className="list"><b>Technical assistance</b> from our Implementation Managers and Support Engineers</li>
+                                    <li className="list"><b>More support options</b> including chat, callback, and live onboarding</li>
                                 </ul>
                             </Modal>
                         </Card>

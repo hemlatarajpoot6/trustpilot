@@ -76,3 +76,6 @@ ul{
     background-color: rgb(242, 242, 245);
     padding: 0px 1rem 0px 0.75rem;
 }
+.table-content{
+    overflow: auto;
+}

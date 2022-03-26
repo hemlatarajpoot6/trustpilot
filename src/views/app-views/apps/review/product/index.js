@@ -3,6 +3,11 @@ import { Tabs } from 'antd';
 import Inbox from "./tabs/Inbox";
 import QandA from "./tabs/Q&A";
 import ProductCatalog from "./tabs/ProductCatalog";
+import ProductAttributes from "./tabs/ProductAttributes";
+import Analytics from "./tabs/Analytics";
+import ThirdPartyReview from "./tabs/ThirdPartyReview";
+import Settings from "./tabs/Settings";
+import TestProduct from "./tabs/TestProduct";
 
 const Product = () =>{
 
@@ -25,19 +30,19 @@ function callback(key) {
           <ProductCatalog />
         </TabPane>
         <TabPane tab="Product attributes" key="4">
-          Content of Tab Pane 2
+         <ProductAttributes />
         </TabPane>
         <TabPane tab="Analytics" key="5">
-          Content of Tab Pane 2
+          <Analytics />
         </TabPane>
         <TabPane tab="Third-party reviews" key="6">
-          Content of Tab Pane 2
+      <ThirdPartyReview />
         </TabPane>
         <TabPane tab="Settings" key="7">
-          Content of Tab Pane 2
+          <Settings />
         </TabPane>
         <TabPane tab="Test product reviews" key="8">
-          Content of Tab Pane 2
+          <TestProduct />
         </TabPane>
       </Tabs>
     )

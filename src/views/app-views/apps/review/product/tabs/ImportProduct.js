@@ -1,11 +1,15 @@
-import React from "react";
-import { Upload, message, Row, Col, Card } from 'antd';
+import React, {useState} from "react";
+import { Upload, message, Row, Col, Card, Steps, Button } from 'antd';
 import { DownloadOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
+import { CheckOutlined } from "@ant-design/icons"
+import Tables from "./ImportTable";
 
 const ImportProduct = () => {
 
+    const { Step } = Steps;
     const { Dragger } = Upload;
+    const [current, setCurrent] = useState(0);
 
     const props = {
         name: 'file',
@@ -26,9 +30,20 @@ const ImportProduct = () => {
             console.log('Dropped files', e.dataTransfer.files);
         },
     };
-    return (
-        <>
-            <h2>Create a CSV file</h2>
+
+    const next = () => {
+        setCurrent(current + 1);
+      };
+    
+      const prev = () => {
+        setCurrent(current - 1);
+      };
+
+      const steps = [
+        {
+          title: 'Upload CSV',
+          content: <>
+          <h2 className="mt-4">Create a CSV file</h2>
             <div className="d-flex justify-content-between">
                 <p className="pr-5">Your file should contain separate columns for each data point below (in the same order).
                     If you don’t have corresponding data, please leave the space blank.</p>
@@ -116,7 +131,6 @@ const ImportProduct = () => {
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={12}>
                     <Card style={{height: "100%"}} className="ml-2 d-flex">
-                      
                             <Dragger {...props}>
                                 <p className="ant-upload-drag-icon">
                                 <DownloadOutlined />
@@ -126,11 +140,60 @@ const ImportProduct = () => {
                                 <p className="ant-upload-hint">
                                     Max 2000 lines per file
                                 </p>
-                            </Dragger>,
-                        
+                            </Dragger>
                     </Card>
                 </Col>
             </Row>
+          </>,
+        },
+        {
+          title: 'Confirm data',
+          content: <>
+         <Tables />
+          </>,
+        },
+        {
+          title: 'Done',
+          content: <>
+          <Card>
+          <div className="text-center align-items-center">
+                                <div><CheckOutlined className="text-success upgrade-contact" /></div>
+                                <h2>We’ve successfully updated your product details</h2>
+                                <p>You’ve added or updated 7 products</p>
+                                <Link to='/app/apps/review/product'><Button type="primary">Go to product catalog</Button></Link>
+                            </div>
+          </Card>
+          </>,
+        },
+      ];
+
+  
+    return (
+        <>
+         <Steps current={current}>
+        {steps.map(item => (
+          <Step key={item.title} title={item.title} />
+        ))}
+      </Steps>
+      <div className="steps-content">{steps[current].content}</div>
+      <div className="steps-action float-right mt-4">
+        {current < steps.length - 1 && (
+          <Button type="primary" onClick={() => next()}>
+            Next
+          </Button>
+        )}
+        {current === steps.length - 1 && (
+          <Button type="primary" onClick={() => message.success('Processing complete!')}>
+            Done
+          </Button>
+        )}
+        {current > 0 && (
+          <Button style={{ margin: '0 8px' }} onClick={() => prev()}>
+            Previous
+          </Button>
+        )}
+      </div>
+            
         </>
     )
 };

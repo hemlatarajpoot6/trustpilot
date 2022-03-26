@@ -463,6 +463,7 @@ class ProductCatalog extends React.Component {
                         allowClear
                         onChange={this.handleChange}
                         placeholder="Category"
+                        style={{ width: '20%' }}
                     >
                          <Search placeholder="input search text"
                          className="mr-1 font-weight-bold" onSearch={this.onSearch} />
@@ -475,6 +476,7 @@ class ProductCatalog extends React.Component {
                         allowClear
                         onChange={this.handleChange}
                         placeholder="Reviews"
+                        style={{ width: '20%' }}
                     >
                          <Option value="prowith">
                         Products with reviews

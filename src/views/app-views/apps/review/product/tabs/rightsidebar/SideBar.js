@@ -1,26 +1,12 @@
-import { Button, Card, Col, Divider, Row } from "antd";
 import React from "react";
+import { Button, Card, Divider } from "antd";
+import { CheckCircleFilled } from "@ant-design/icons";
 import { Link } from "react-router-dom";
-import qandaimage from "../../../../../../assets/img/18c40f7307ae05ba135c.png"
-import "../../service/service.css";
-import { CheckCircleFilled } from "@ant-design/icons"
 
-const QandA = () => {
+const SideBar = () =>{
 
-    return (
-        <React.Fragment>
-            <Row>
-                <Col xs={24} sm={24} md={24} lg={14}>
-                    <Card className="mr-3">
-                        <div className="background-color">
-                            <img src={qandaimage} alt='q&aimg' className="mt-5 mb-5" />
-                            <h1 className="mb-3">Decrease customer hesitation</h1>
-                            <h4 className="mb-5">Make it easy for new customers to ask their product questions and provide them with answers – straight from your product page.</h4>
-                        </div>
-                    </Card>
-                </Col>
-                <Col xs={24} sm={24} md={24} lg={10}>
-                    <Card className="ml-3">
+    return(
+        <Card className="ml-3">
                         <div>
                             <h3>This feature is part of the Product Reviews add-on module. You can unlock it by upgrading your plan.</h3>
                             <Divider />
@@ -70,10 +56,7 @@ const QandA = () => {
                             </ul>
                         </div>
                     </Card>
-                </Col>
-            </Row>
-        </React.Fragment>
     )
 };
 
-export default QandA;
+export default SideBar;
