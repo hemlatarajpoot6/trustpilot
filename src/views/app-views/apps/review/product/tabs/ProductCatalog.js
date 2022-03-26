@@ -456,9 +456,9 @@ class ProductCatalog extends React.Component {
                <Row>
                    <Col xs={24} sm={24} md={24} lg={24}>
                    <div className='mb-5 d-flex justify-content-between'>
-                   <div>
+                   <div className='catalog-width'>
                    <Search placeholder="Search your products…"
-                        style={{ width: '50%' }} className="mr-1 font-weight-bold" onSearch={this.onSearch} />
+                        style={{ width: '30%' }} className="mr-1 font-weight-bold" onSearch={this.onSearch} />
                         <Select className="mr-1"
                         allowClear
                         onChange={this.handleChange}

@@ -79,3 +79,26 @@ ul{
 .table-content{
     overflow: auto;
 }
+.setting-background{
+    background-color: #f9f9fa;
+    padding: 20px 0px 10px 20px;
+    margin-top: 20px;
+}
+.catalog-width{
+    width: -webkit-fill-available;
+}
+.preselected{
+    margin: 0px 20px 0px 0px;
+    background: aliceblue;
+    padding: 6px 22px 6px 22px;
+    border-radius: 20px;
+}
+.scroll-height{
+    height: 300px;
+    overflow: auto;
+}
+.box-product{
+    border: 1px solid lightgrey;
+    margin: 0px 20px 0px 40px;
+    padding: 15px;
+}
