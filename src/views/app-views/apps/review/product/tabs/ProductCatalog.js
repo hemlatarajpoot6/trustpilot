@@ -81,7 +81,7 @@ class ProductCatalog extends React.Component {
 
     setModal1Visible(modal1Visible) {
         this.setState({ modal1Visible });
-      }
+    }
 
 
     handleToggle = prop => enable => {
@@ -132,11 +132,11 @@ class ProductCatalog extends React.Component {
         this.setState({ hasData });
     };
 
-  onSearch = value => console.log(value);
+    onSearch = value => console.log(value);
 
-  handleChange = (value) => {
-    console.log(value);
-}
+    handleChange = (value) => {
+        console.log(value);
+    }
 
     render() {
         const { xScroll, yScroll, ...state } = this.state;
@@ -153,8 +153,8 @@ class ProductCatalog extends React.Component {
                     <img src={rating} alt="rating" />
                 </>,
                 description: <>
-                 <Button className='mr-2 mb-4' onClick={() => this.setModal1Visible(true)}>Edit product details</Button>
-        
+                    <Button className='mr-2 mb-4' onClick={() => this.setModal1Visible(true)}>Edit product details</Button>
+
                     <Button className='ml-2 mb-4'><DeleteOutlined />Delete product</Button>
                     <Row>
                         <Col xs={24} sm={24} md={24} lg={12}>
@@ -268,229 +268,229 @@ class ProductCatalog extends React.Component {
 
         return (
             <>
-               
-            <Modal
-            okText="Save changes"
-            width={900}
-          title="Edit product details"
-          style={{ top: 20 }}
-          visible={this.state.modal1Visible}
-          onOk={() => this.setModal1Visible(false)}
-          onCancel={() => this.setModal1Visible(false)}
-        >
-         <Form layout="vertical">
-        <Row>
-            <Col xs={24} sm={24} md={24} lg={12}>
-            <Form.Item
-             label="Product name"
-					name="product_name"
-					hasFeedback
-					id='numberInput'
-				>
-					<Input />
-				</Form.Item>
-            </Col>
-            <Col xs={24} sm={24} md={24} lg={12}>
-            <Form.Item
-            label="Product SKU"
-					name="product_sku"
-					hasFeedback
-					id='numberInput'
-                    className='col-sm-6 col-md-6'
-				>
-					<Input />
-				</Form.Item>
-            </Col>
-        </Row>
-        <Form.Item
-            label="Product URL"
-					name="website"
-					hasFeedback
-					id='numberInput'
-                    className='col-sm-6 col-md-6'
-				>
-					<Input />
-				</Form.Item>
-                <Form.Item
-            label="Product image URL"
-					name="website"
-					hasFeedback
-					id='numberInput'
-                    className='col-sm-6 col-md-6'
-				>
-					<Input />
-				</Form.Item>
-                <p>It might take a few minutes for the image to update after you save changes</p>
-                <img alt='Product images preview' className='mb-3' />
+
+                <Modal
+                    okText="Save changes"
+                    width={900}
+                    title="Edit product details"
+                    style={{ top: 20 }}
+                    visible={this.state.modal1Visible}
+                    onOk={() => this.setModal1Visible(false)}
+                    onCancel={() => this.setModal1Visible(false)}
+                >
+                    <Form layout="vertical">
+                        <Row>
+                            <Col xs={24} sm={24} md={24} lg={12}>
+                                <Form.Item
+                                    label="Product name"
+                                    name="product_name"
+                                    hasFeedback
+                                    id='numberInput'
+                                >
+                                    <Input />
+                                </Form.Item>
+                            </Col>
+                            <Col xs={24} sm={24} md={24} lg={12}>
+                                <Form.Item
+                                    label="Product SKU"
+                                    name="product_sku"
+                                    hasFeedback
+                                    id='numberInput'
+                                    className='col-sm-6 col-md-6'
+                                >
+                                    <Input />
+                                </Form.Item>
+                            </Col>
+                        </Row>
+                        <Form.Item
+                            label="Product URL"
+                            name="website"
+                            hasFeedback
+                            id='numberInput'
+                            className='col-sm-6 col-md-6'
+                        >
+                            <Input />
+                        </Form.Item>
+                        <Form.Item
+                            label="Product image URL"
+                            name="website"
+                            hasFeedback
+                            id='numberInput'
+                            className='col-sm-6 col-md-6'
+                        >
+                            <Input />
+                        </Form.Item>
+                        <p>It might take a few minutes for the image to update after you save changes</p>
+                        <img alt='Product images preview' className='mb-3' />
+                        <Row>
+                            <Col xs={24} sm={24} md={24} lg={12}>
+                                <Form.Item
+                                    label="GTIN"
+                                    name="website"
+                                    hasFeedback
+                                    id='numberInput'
+                                    className='col-sm-6 col-md-6'
+                                >
+                                    <Input />
+                                </Form.Item>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col xs={24} sm={24} md={24} lg={12}>
+                                <Form.Item
+                                    label="MPN"
+                                    name="website"
+                                    hasFeedback
+                                    id='numberInput'
+                                    className='col-sm-6 col-md-6'
+                                >
+                                    <Input />
+                                </Form.Item>
+                                <Form.Item
+                                    label="Brand"
+                                    name="website"
+                                    hasFeedback
+                                    id='numberInput'
+                                    className='col-sm-6 col-md-6'
+                                >
+                                    <Input />
+                                </Form.Item>
+                            </Col>
+                            <Col xs={24} sm={24} md={24} lg={12}>
+                                <Form.Item
+                                    label="Price"
+                                    name="website"
+                                    hasFeedback
+                                    id='numberInput'
+                                    className='col-sm-6 col-md-6'
+                                >
+                                    <Input />
+                                </Form.Item>
+                                <Form.Item
+                                    label="Currency"
+                                    name="website"
+                                    hasFeedback
+                                    id='numberInput'
+                                    className='col-sm-6 col-md-6'
+                                >
+                                    <Input />
+                                </Form.Item>
+                            </Col>
+                        </Row>
+                        <h4>Variant details</h4>
+                        <Row>
+                            <Col xs={24} sm={24} md={24} lg={12}>
+                                <Form.Item
+                                    label="Variant group ID"
+                                    name="website"
+                                    hasFeedback
+                                    id='numberInput'
+                                    className='col-sm-6 col-md-6'
+                                >
+                                    <Input />
+                                </Form.Item>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col xs={24} sm={24} md={24} lg={12}>
+                                <Form.Item
+                                    label="Size"
+                                    name="website"
+                                    hasFeedback
+                                    id='numberInput'
+                                    className='col-sm-6 col-md-6'
+                                >
+                                    <Input />
+                                </Form.Item>
+                                <Form.Item
+                                    label="Color"
+                                    name="website"
+                                    hasFeedback
+                                    id='numberInput'
+                                    className='col-sm-6 col-md-6'
+                                >
+                                    <Input />
+                                </Form.Item>
+                                <Form.Item
+                                    label="Material"
+                                    name="website"
+                                    hasFeedback
+                                    id='numberInput'
+                                    className='col-sm-6 col-md-6'
+                                >
+                                    <Input />
+                                </Form.Item>
+                            </Col>
+                            <Col xs={24} sm={24} md={24} lg={12}>
+                                <Form.Item
+                                    label="Pattern"
+                                    name="website"
+                                    hasFeedback
+                                    id='numberInput'
+                                    className='col-sm-6 col-md-6'
+                                >
+                                    <Input />
+                                </Form.Item>
+                                <Form.Item
+                                    label="Age group"
+                                    name="website"
+                                    hasFeedback
+                                    id='numberInput'
+                                    className='col-sm-6 col-md-6'
+                                >
+                                    <Input />
+                                </Form.Item>
+                                <Form.Item
+                                    label="Gender/Sex"
+                                    name="website"
+                                    hasFeedback
+                                    id='numberInput'
+                                    className='col-sm-6 col-md-6'
+                                >
+                                    <Input />
+                                </Form.Item>
+                            </Col>
+                        </Row>
+                    </Form>
+                </Modal>
                 <Row>
-                <Col xs={24} sm={24} md={24} lg={12}>
-            <Form.Item
-            label="GTIN"
-					name="website"
-					hasFeedback
-					id='numberInput'
-                    className='col-sm-6 col-md-6'
-				>
-					<Input />
-				</Form.Item>
-            </Col>
+                    <Col xs={24} sm={24} md={24} lg={24}>
+                        <div className='mb-5 d-flex justify-content-between'>
+                            <div className='catalog-width'>
+                                <Search placeholder="Search your products…"
+                                    style={{ width: '30%' }} className="mr-1 font-weight-bold" onSearch={this.onSearch} />
+                                <Select className="mr-1"
+                                    allowClear
+                                    onChange={this.handleChange}
+                                    placeholder="Category"
+                                    style={{ width: '20%' }}
+                                >
+                                    <Search placeholder="input search text"
+                                        className="mr-1 font-weight-bold" onSearch={this.onSearch} />
+                                    <Option value="un">
+                                        Uncategorized
+                                    </Option>
+                                    <Button>Apply</Button>
+                                </Select>
+                                <Select className="mr-1"
+                                    allowClear
+                                    onChange={this.handleChange}
+                                    placeholder="Reviews"
+                                    style={{ width: '20%' }}
+                                >
+                                    <Option value="prowith">
+                                        Products with reviews
+                                    </Option>
+                                    <Option value="prowithout">
+                                        Products without reviews
+                                    </Option>
+                                    <Button>Apply</Button>
+                                </Select>
+                            </div>
+                            <Link to="/app/apps/review/import"><Button type='primary'>Import products</Button></Link>
+                        </div>
+                    </Col>
                 </Row>
-                <Row>
-                <Col xs={24} sm={24} md={24} lg={12}>
-            <Form.Item
-            label="MPN"
-					name="website"
-					hasFeedback
-					id='numberInput'
-                    className='col-sm-6 col-md-6'
-				>
-					<Input />
-				</Form.Item>
-                <Form.Item
-            label="Brand"
-					name="website"
-					hasFeedback
-					id='numberInput'
-                    className='col-sm-6 col-md-6'
-				>
-					<Input />
-				</Form.Item>
-            </Col>
-            <Col xs={24} sm={24} md={24} lg={12}>
-            <Form.Item
-            label="Price"
-					name="website"
-					hasFeedback
-					id='numberInput'
-                    className='col-sm-6 col-md-6'
-				>
-					<Input />
-				</Form.Item>
-            <Form.Item
-            label="Currency"
-					name="website"
-					hasFeedback
-					id='numberInput'
-                    className='col-sm-6 col-md-6'
-				>
-					<Input />
-				</Form.Item>
-            </Col>
-                </Row>
-                <h4>Variant details</h4>
-                <Row>
-                <Col xs={24} sm={24} md={24} lg={12}>
-            <Form.Item
-            label="Variant group ID"
-					name="website"
-					hasFeedback
-					id='numberInput'
-                    className='col-sm-6 col-md-6'
-				>
-					<Input />
-				</Form.Item>
-            </Col>
-                </Row>
-                <Row>
-                <Col xs={24} sm={24} md={24} lg={12}>
-            <Form.Item
-            label="Size"
-					name="website"
-					hasFeedback
-					id='numberInput'
-                    className='col-sm-6 col-md-6'
-				>
-					<Input />
-				</Form.Item>
-                <Form.Item
-            label="Color"
-					name="website"
-					hasFeedback
-					id='numberInput'
-                    className='col-sm-6 col-md-6'
-				>
-					<Input />
-				</Form.Item>
-                <Form.Item
-            label="Material"
-					name="website"
-					hasFeedback
-					id='numberInput'
-                    className='col-sm-6 col-md-6'
-				>
-					<Input />
-				</Form.Item>
-            </Col>
-            <Col xs={24} sm={24} md={24} lg={12}>
-            <Form.Item
-            label="Pattern"
-					name="website"
-					hasFeedback
-					id='numberInput'
-                    className='col-sm-6 col-md-6'
-				>
-					<Input />
-				</Form.Item>
-            <Form.Item
-            label="Age group"
-					name="website"
-					hasFeedback
-					id='numberInput'
-                    className='col-sm-6 col-md-6'
-				>
-					<Input />
-				</Form.Item>
-                <Form.Item
-            label="Gender/Sex"
-					name="website"
-					hasFeedback
-					id='numberInput'
-                    className='col-sm-6 col-md-6'
-				>
-					<Input />
-				</Form.Item>
-            </Col>
-                </Row>
-         </Form>
-        </Modal>
-               <Row>
-                   <Col xs={24} sm={24} md={24} lg={24}>
-                   <div className='mb-5 d-flex justify-content-between'>
-                   <div className='catalog-width'>
-                   <Search placeholder="Search your products…"
-                        style={{ width: '30%' }} className="mr-1 font-weight-bold" onSearch={this.onSearch} />
-                        <Select className="mr-1"
-                        allowClear
-                        onChange={this.handleChange}
-                        placeholder="Category"
-                        style={{ width: '20%' }}
-                    >
-                         <Search placeholder="input search text"
-                         className="mr-1 font-weight-bold" onSearch={this.onSearch} />
-                        <Option value="un">
-                        Uncategorized
-                        </Option>
-                        <Button>Apply</Button>
-                    </Select>
-                        <Select className="mr-1"
-                        allowClear
-                        onChange={this.handleChange}
-                        placeholder="Reviews"
-                        style={{ width: '20%' }}
-                    >
-                         <Option value="prowith">
-                        Products with reviews
-                        </Option>
-                        <Option value="prowithout">
-                        Products without reviews
-                        </Option>
-                        <Button>Apply</Button>
-                    </Select>
-                   </div>
-                  <Link to="/app/apps/review/import"><Button type='primary'>Import products</Button></Link>
-                   </div>
-                   </Col>
-               </Row>
                 <Table
                     {...this.state}
                     pagination={{ position: [this.state.top, this.state.bottom] }}

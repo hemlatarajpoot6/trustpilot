@@ -30,7 +30,7 @@ const QandA = () => {
                                     <CheckCircleFilled className="text-success mr-3 mt-1" />
                                     <div>
                                         <li className="list-box-product">
-                                           <b> Product TrustBoxes</b> to showcase reviews on your product and category pages
+                                            <b> Product TrustBoxes</b> to showcase reviews on your product and category pages
                                         </li>
                                     </div>
                                 </div>
@@ -38,7 +38,7 @@ const QandA = () => {
                                     <CheckCircleFilled className="text-success mr-3 mt-1" />
                                     <div>
                                         <li className="list-box-product">
-                                        <b>Rich snippet stars</b> to stand out in organic search results
+                                            <b>Rich snippet stars</b> to stand out in organic search results
                                         </li>
                                     </div>
                                 </div>
@@ -46,7 +46,7 @@ const QandA = () => {
                                     <CheckCircleFilled className="text-success mr-3 mt-1" />
                                     <div>
                                         <li className="list-box-product">
-                                       <b> User-generated photos in product reviews</b> you can showcase on your site and in your marketing materials
+                                            <b> User-generated photos in product reviews</b> you can showcase on your site and in your marketing materials
                                         </li>
                                     </div>
                                 </div>
@@ -54,7 +54,7 @@ const QandA = () => {
                                     <CheckCircleFilled className="text-success mr-3 mt-1" />
                                     <div>
                                         <li className="list-box-product">
-                                       <b> Google Seller Ratings for product ads</b> to increase traffic and sales
+                                            <b> Google Seller Ratings for product ads</b> to increase traffic and sales
                                         </li>
                                     </div>
                                 </div>
@@ -62,7 +62,7 @@ const QandA = () => {
                                     <CheckCircleFilled className="text-success mr-3 mt-1" />
                                     <div>
                                         <li className="list-box-product">
-                                        <b>Import existing third-party product reviews</b> for a head start on your collection
+                                            <b>Import existing third-party product reviews</b> for a head start on your collection
                                         </li>
                                     </div>
                                 </div>
