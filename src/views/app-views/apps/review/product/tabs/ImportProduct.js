@@ -177,6 +177,11 @@ const ImportProduct = () => {
             </Steps>
             <div className="steps-content">{steps[current].content}</div>
             <div className="steps-action float-right mt-4">
+            {current > 0 && (
+                    <Button style={{ margin: '0 8px' }} onClick={() => prev()}>
+                        Previous
+                    </Button>
+                )}
                 {current < steps.length - 1 && (
                     <Button type="primary" onClick={() => next()}>
                         Next
@@ -187,11 +192,7 @@ const ImportProduct = () => {
                         Done
                     </Button>
                 )}
-                {current > 0 && (
-                    <Button style={{ margin: '0 8px' }} onClick={() => prev()}>
-                        Previous
-                    </Button>
-                )}
+                
             </div>
 
         </>

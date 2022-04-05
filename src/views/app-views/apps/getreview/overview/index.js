@@ -2,6 +2,9 @@ import { Button, Card, Col, Row } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 import inboximg from "../../../../../assets/img/c5094b1a2520442d995a.svg";
+import BarChart from "./BarChart";
+import  "../getreview.css";
+import { UnlockOutlined } from "@ant-design/icons"
 
 const Overview = () => {
 
@@ -46,7 +49,12 @@ const Overview = () => {
                             <p>Your most used service review template</p>
                         </Col>
                         <Col xs={24} sm={24} md={24} lg={12}>
-
+                           <div style={{position: "relative", height: "200px"}}> <BarChart /></div>
+                            <div className="unlock-features">
+                                <h3>Want to see more on how your invitations are converting?</h3>
+                                <p>Get access to more.</p>
+                                <Link to="/app/apps/getreview/unlock"><UnlockOutlined /> Unlock feature</Link>
+                            </div>
                         </Col>
                     </Row>
                     </Card>

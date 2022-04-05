@@ -14,7 +14,7 @@ const Settings = () => {
     }
 
     const [isModalVisible, setIsModalVisible] = useState(false);
-    const [switchModal, setSwitchModal] = useState(false);
+    // const [switchModal, setSwitchModal] = useState(false);
 
     const showModal = () => {
         setIsModalVisible(true);
@@ -27,16 +27,16 @@ const Settings = () => {
     const handleCancel = () => {
         setIsModalVisible(false);
     };
-    const switchDisable = () => {
-        setSwitchModal(true)
-    }
-    const handleOkSwitch = () => {
-        setSwitchModal(false);
-    };
+    // const switchDisable = () => {
+    //     setSwitchModal(true)
+    // }
+    // const handleOkSwitch = () => {
+    //     setSwitchModal(false);
+    // };
 
-    const handleCancelSwitch = () => {
-        setSwitchModal(false);
-    };
+    // const handleCancelSwitch = () => {
+    //     setSwitchModal(false);
+    // };
     const text = <>
     <span className="mb-3">Doing this removes attributes from all your products. Your customers will also no longer be able to rate individual product attributes.</span><br />
     <br />
