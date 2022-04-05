@@ -475,7 +475,7 @@ class ProductCatalog extends React.Component {
                                     </Option>
                                     <Button onClick={this.apply}>Apply</Button>
                                 </Select>
-                                <Button onClick={this.apply}>Apply</Button>
+                                {/* <Button onClick={this.apply}>Apply</Button> */}
                                 <Select className="mr-1"
                                     allowClear
                                     onChange={this.handleChange}

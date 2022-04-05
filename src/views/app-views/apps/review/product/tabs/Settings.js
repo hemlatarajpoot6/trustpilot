@@ -91,7 +91,7 @@ const Settings = () => {
                                     defaultChecked
                                 />
                             </Tooltip>
-                            <Switch
+                            {/* <Switch
                                 checkedChildren={<CheckOutlined />}
                                 unCheckedChildren={<CloseOutlined />
                             }
@@ -102,7 +102,7 @@ const Settings = () => {
                             <Modal title="Disable product attribute ratings?" visible={switchModal} okText="Yes, disable attributes" onOk={handleOkSwitch} onCancel={handleCancelSwitch}>
                                 <h5>Doing this removes attributes from all your products. Your customers will also no longer be able to rate individual product attributes.</h5>
                                 <h5>You can read more about product attribute ratings in our <Link to="#">Support article.</Link></h5>
-                            </Modal>
+                            </Modal> */}
                         </div>
                     </Card>
                 </Col>
