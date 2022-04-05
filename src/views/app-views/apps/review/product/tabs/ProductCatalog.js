@@ -137,6 +137,9 @@ class ProductCatalog extends React.Component {
     handleChange = (value) => {
         console.log(value);
     }
+    apply = () =>{
+        alert("apply")
+    }
 
     render() {
         const { xScroll, yScroll, ...state } = this.state;
@@ -470,8 +473,9 @@ class ProductCatalog extends React.Component {
                                     <Option value="un">
                                         Uncategorized
                                     </Option>
-                                    <Button>Apply</Button>
+                                    <Button onClick={this.apply}>Apply</Button>
                                 </Select>
+                                <Button onClick={this.apply}>Apply</Button>
                                 <Select className="mr-1"
                                     allowClear
                                     onChange={this.handleChange}

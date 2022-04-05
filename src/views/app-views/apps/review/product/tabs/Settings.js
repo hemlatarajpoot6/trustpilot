@@ -1,4 +1,4 @@
-import { Button, Card, Col, Row, Switch, Modal, Tabs } from "antd";
+import { Button, Card, Col, Row, Switch, Modal, Tabs, Tooltip } from "antd";
 import React, { useState } from "react";
 import { CloseOutlined, CheckOutlined } from '@ant-design/icons';
 import { Link } from "react-router-dom";
@@ -14,6 +14,7 @@ const Settings = () => {
     }
 
     const [isModalVisible, setIsModalVisible] = useState(false);
+    const [switchModal, setSwitchModal] = useState(false);
 
     const showModal = () => {
         setIsModalVisible(true);
@@ -26,6 +27,21 @@ const Settings = () => {
     const handleCancel = () => {
         setIsModalVisible(false);
     };
+    const switchDisable = () => {
+        setSwitchModal(true)
+    }
+    const handleOkSwitch = () => {
+        setSwitchModal(false);
+    };
+
+    const handleCancelSwitch = () => {
+        setSwitchModal(false);
+    };
+    const text = <>
+    <span className="mb-3">Doing this removes attributes from all your products. Your customers will also no longer be able to rate individual product attributes.</span><br />
+    <br />
+    <span className="mt-4 pt-3">You can read more about product attribute ratings in our <Link to="3">Support article.</Link></span>
+    </>
 
     return (
         <React.Fragment>
@@ -37,7 +53,7 @@ const Settings = () => {
                             <div>
                                 <h5>Ask customers to rate your product attributes</h5>
                                 <p>Turn on this feature to get detailed product ratings for all your products.
-                                    <Button onClick={showModal} className="text-info">Learn more.</Button>
+                                    <Button onClick={showModal} className="text-info ml-3">Learn more.</Button>
                                 </p>
                                 <Modal title="What are product attribute ratings?" okText="Got it!" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} width={1000}>
                                     <Row>
@@ -68,11 +84,25 @@ const Settings = () => {
                                     </Row>
                                 </Modal>
                             </div>
+                            <Tooltip placement="top" title={text}>
+                                <Switch
+                                    checkedChildren={<CheckOutlined />}
+                                    unCheckedChildren={<CloseOutlined />}
+                                    defaultChecked
+                                />
+                            </Tooltip>
                             <Switch
                                 checkedChildren={<CheckOutlined />}
-                                unCheckedChildren={<CloseOutlined />}
+                                unCheckedChildren={<CloseOutlined />
+                            }
                                 defaultChecked
+                                onClick={switchDisable}
                             />
+                            
+                            <Modal title="Disable product attribute ratings?" visible={switchModal} okText="Yes, disable attributes" onOk={handleOkSwitch} onCancel={handleCancelSwitch}>
+                                <h5>Doing this removes attributes from all your products. Your customers will also no longer be able to rate individual product attributes.</h5>
+                                <h5>You can read more about product attribute ratings in our <Link to="#">Support article.</Link></h5>
+                            </Modal>
                         </div>
                     </Card>
                 </Col>

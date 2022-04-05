@@ -1,11 +1,13 @@
 import { Button, Card, Col, Divider, Row, Modal, Checkbox, Input } from "antd";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { PlusCircleOutlined, LockOutlined } from "@ant-design/icons";
 import product from "../../../../../../assets/img/stars-0 (1).svg";
 import productreviw from "../../../../../../assets/img/74a4a6c15f9e4b9b3d54.svg"
 
 const ProductAttributes = () => {
+
+    const history = useHistory();
 
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [checkbox, setCheckbox] = useState(false);
@@ -26,6 +28,10 @@ const ProductAttributes = () => {
     function onChange(e) {
         console.log(`checked = ${e.target.checked}`);
         setCheckbox(e.target.value)
+    }
+
+    const productcatalog = () =>{
+        history.push('/app/apps/review/product',{key:1});
     }
 
     return (
@@ -163,8 +169,9 @@ const ProductAttributes = () => {
                             <Button onClick={showModal}><PlusCircleOutlined /> Add attribute</Button>
                         </div>
                         <div className="setting-background">
-                            <p><b>Tip</b>: Got different products?  <Link to="">Organize
+                            <p><b>Tip</b>: Got different products?  <Link to="/app/apps/review/product/ProductCatalog">Organize
                                 your products into categories</Link>  so you can easily add more attributes.</p>
+                                <Button onClick={productcatalog} key="3">fbhgfbh</Button>
                         </div>
                     </Card>
                 </Col>

@@ -20,13 +20,13 @@ const Product = () => {
 
   return (
     <Tabs defaultActiveKey="1" onChange={callback}>
-      <TabPane tab="Inbox" key="1">
+      <TabPane tab="Inbox" key="3">
         <Inbox />
       </TabPane>
       <TabPane tab="Q&A" key="2">
         <QandA />
       </TabPane>
-      <TabPane tab="Product catalog" key="3">
+      <TabPane tab="Product catalog" key="1">
         <ProductCatalog />
       </TabPane>
       <TabPane tab="Product attributes" key="4">

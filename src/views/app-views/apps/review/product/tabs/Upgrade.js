@@ -240,8 +240,8 @@ const Upgrade = () => {
                                     <li className="list"><b>Product TrustBoxes</b> to showcase reviews on your product and category pages</li>
                                     <li className="list"><b>Rich snippet stars</b> to stand out in organic search results</li>
                                     <li className="list"><b>User-generated photos in product reviews</b> you can showcase on your site and in your marketing materials</li>
-                                    <li><b>Google Seller Ratings for product ads</b>to increase traffic and sales</li>
-                                    <li><b>Import existing third-party product reviews</b>for a head start on your collection</li>
+                                    <li className="list"><b>Google Seller Ratings for product ads</b> to increase traffic and sales</li>
+                                    <li className="list"><b>Import existing third-party product reviews</b> for a head start on your collection</li>
                                 </ul>
                             </Modal>
                         </Card>
@@ -259,17 +259,13 @@ const Upgrade = () => {
                                 <h4>This add-on module includes:</h4>
                                 <ul>
                                     <li className="list">
-                                        <b>Review Insights</b>
-                                        to automatically detect topics in your reviews and the sentiment of those topics</li>
+                                        <b>Review Insights</b> to automatically detect topics in your reviews and the sentiment of those topics</li>
                                     <li className="list">
-                                        <b>Custom topics</b>
-                                        to discover insights tailored to your company or industry</li>
+                                        <b>Custom topics</b> to discover insights tailored to your company or industry</li>
                                     <li className="list">
-                                        <b>Trend reports</b>
-                                        on statistics and insights based on an automated analysis of last month's reviews</li>
+                                        <b>Trend reports</b>  on statistics and insights based on an automated analysis of last month's reviews</li>
                                     <li className="list">
-                                        <b>Sentiment heat maps</b>
-                                        to identify your company’s strengths and areas of improvement</li>
+                                        <b>Sentiment heat maps</b>  to identify your company’s strengths and areas of improvement</li>
                                 </ul>
                             </Modal>
                         </Card>
