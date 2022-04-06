@@ -79,7 +79,7 @@ const Settings = () => {
                                                 <TabPane tab="TrustBox" key="2">
                                                     <img src={trustimg} width={300} alt="trustimg" />
                                                 </TabPane>
-                                            </Tabs>,
+                                            </Tabs>
                                         </Col>
                                     </Row>
                                 </Modal>

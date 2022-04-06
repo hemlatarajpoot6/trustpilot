@@ -7,21 +7,23 @@ export class StackedColumn extends Component {
 		series: [{
 			name: 'PRODUCT A',
 			data: [44, 55, 41, 67, 22, 43]
-		}, {
-			name: 'PRODUCT B',
-			data: [13, 23, 20, 8, 13, 27]
-		}, {
-			name: 'PRODUCT C',
-			data: [11, 17, 15, 15, 21, 14]
-		}],
+		}, 
+		// {
+		// 	name: 'PRODUCT B',
+		// 	data: [13, 23, 20, 8, 13, 27]
+		// }, {
+		// 	name: 'PRODUCT C',
+		// 	data: [11, 17, 15, 15, 21, 14]
+		// }
+	],
 		options: {
 			chart: {
-				stacked: true,
+				stacked: false,
 				toolbar: {
-					show: true
+					show: false
 				},
 				zoom: {
-					enabled: true
+					enabled: false
 				}
 			},
 			colors: [COLOR_1, COLOR_2, COLOR_4],
@@ -62,7 +64,7 @@ export class StackedColumn extends Component {
 				options={this.state.options}
 				series={this.state.series}
 				type="bar"
-				height= {300}
+				height= {200}
 			/>
 		)
 	}

@@ -2,7 +2,8 @@ import { Button, Card, Col, Row, Table } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 import inboximg from "../../../../../assets/img/c5094b1a2520442d995a.svg";
-import BarChart from "./BarChart";
+// import BarChart from "./BarChart";
+import StackedColumn from "../../../charts/apex/StackedColumn";
 import "../getreview.css";
 import { UnlockOutlined } from "@ant-design/icons"
 
@@ -97,7 +98,10 @@ const Overview = () => {
                                 <p>Your most used service review template</p>
                             </Col>
                             <Col xs={24} sm={24} md={24} lg={12}>
-                                <div style={{ position: "relative", height: "200px" }}> <BarChart /></div>
+                                <div style={{ position: "relative" }}> 
+                                {/* <BarChart /> */}
+                                <StackedColumn />
+                                </div>
                                 <div className="unlock-features">
                                     <div className="border mt-3 bg-white">
                                         <h3 className="pl-2">Want to see more on how your invitations are converting?</h3>
@@ -112,14 +116,14 @@ const Overview = () => {
             </Row>
             <span className="d-flex justify-content-between">
                 <h3>Recently invited customers</h3>
-                <Link to="#" className="mt-2">See full invitation history</Link>
+                <Link to="/app/apps/getreview/invitationsHistory" className="mt-2">See full invitation history</Link>
             </span>
             <Card>
                 <Row>
                     <Col xs={24} sm={24} md={24} lg={24}>
                         <Table columns={columns} />
                         <div className="text-center mt-3">
-                            <Link to="#">See full invitation history</Link>
+                            <Link to="/app/apps/getreview/invitationsHistory">See full invitation history</Link>
                             </div>
                     </Col>
                 </Row>

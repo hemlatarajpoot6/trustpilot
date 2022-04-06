@@ -10,7 +10,7 @@ export class BasicBar extends Component {
 		options: {
 			plotOptions: {
 				bar: {
-					horizontal: true,
+					verticle: true,
 				}
 			},
 			colors: COLORS,
@@ -31,7 +31,7 @@ export class BasicBar extends Component {
 				options={this.state.options}
 				series={this.state.series}
 				type="bar"
-				height= {300}
+				height= {200}
 			/>
 		)
 	}

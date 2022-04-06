@@ -13,3 +13,40 @@ canvas{
     font-size: 15px;
     list-style: none;
 }
+.unlock-features-height{
+    height: 15%;
+}
+.unlock-small-box{
+    height: 5%;
+}
+.list-box-product-box{
+    margin: 0px 0px 2px 5px;
+    font-size: 15px;
+    list-style: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.list-box-product-box:hover{
+    color: rgb(74, 144, 226);
+}
+.upgrade-contact{
+    padding: 20px;
+    font-size: 80px;
+   background-color: rgb(74, 144, 226);
+    border-radius: 50%;
+    margin: 10%;
+}
+.card-box{
+    height: 90%;
+}
+.bg-eye-modal{
+    background-color: rgb(242, 242, 245);
+}
+.ant-select-selection-placeholder{
+    font-weight: bold;
+    color: black;
+}
+.ant-picker-input>input::placeholder {
+    font-weight: bold;
+    color: black;
+ }
