@@ -1,7 +1,15 @@
 .unlock-features{
     position: absolute;
     top: 0;
-    padding: 0px 0px 0px 17px;
-    margin: -20px 0px 1px 64px;
-    background-color: white;
+    padding: 0px 0px -1px 17px;
+    margin: -24px 0px 0px 36px;
+    width: 90%;
+}
+canvas{
+    height: 205px !important;
+}
+.list-box-product-overview{
+    margin: 0px 0px 20px 10px;
+    font-size: 15px;
+    list-style: none;
 }

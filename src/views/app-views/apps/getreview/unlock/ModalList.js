@@ -95,7 +95,7 @@ const ModalList = () =>{
          <Row>
                 <Col xs={24} sm={24} md={24} lg={24}>
                     <div className="text-center">
-                        <h2 className="text-center m-5">Powerful add-ons to serve your specific business needs</h2>
+                        <h2 className="text-center mt-3">Powerful add-ons to serve your specific business needs</h2>
                         <p>Standard subscription required</p>
                     </div>
                 </Col>
