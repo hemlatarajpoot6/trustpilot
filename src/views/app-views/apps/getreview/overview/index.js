@@ -83,12 +83,12 @@ const Overview = () => {
             <Row>
                 <Col xs={24} sm={24} md={24} lg={8}>
                     <Card className="mr-2">
-                        <h4>0</h4>
-                        <h4>Invitations delivered</h4>
-                        <h4>0</h4>
-                        <h4>Verified reviews</h4>
-                        <h4>3.7</h4>
-                        <h4>TrustScore</h4>
+                        <h3>0</h3>
+                        <h5>Invitations delivered</h5>
+                        <h3>0</h3>
+                        <h5>Verified reviews</h5>
+                        <h3>3.7</h3>
+                        <h5>TrustScore</h5>
                     </Card>
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={16}>
@@ -106,7 +106,7 @@ const Overview = () => {
                                     <div className="border mt-3 bg-white">
                                         <h3 className="pl-2">Want to see more on how your invitations are converting?</h3>
                                         <p className="pl-2">Get access to more.</p>
-                                        <Link to="/app/apps/getreview/unlock" className="pl-2"><UnlockOutlined /> Unlock feature</Link>
+                                        <Link to="/app/apps/getreview/unlock" className="pl-2"><UnlockOutlined /> <b>Unlock feature</b></Link>
                                     </div>
                                 </div>
                             </Col>

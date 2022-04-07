@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Select, Col, Row, Input, Table, DatePicker, Card, Modal } from "antd";
-import { DeleteOutlined } from "@ant-design/icons"
+import { DeleteOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 
 const InvitationsHistory = () => {
 
@@ -209,8 +210,8 @@ const InvitationsHistory = () => {
                         </Option>
                         <Button>Apply</Button>
                     </Select>
-                    <DatePicker className="mr-1" renderExtraFooter={() => 'extra footer'} />
-                    <DatePicker className="mr-1" renderExtraFooter={() => 'extra footer'} />
+                    <DatePicker className="mr-1" placeholder="Date created" renderExtraFooter={() => 'extra footer'} />
+                    <DatePicker className="mr-1" placeholder="Date sent" renderExtraFooter={() => 'extra footer'} />
                     <Button className="font-weight-bold text-dark" disabled>Export</Button>
                 </Col>
             </Row>
@@ -219,12 +220,15 @@ const InvitationsHistory = () => {
                     <Card className="mt-4">
                         <span className="d-flex justify-content-between">
                             <h3>Showing 0 invitations from the last 12 months</h3>
-                            <Button onClick={showModal}><DeleteOutlined /> Cancel invitations</Button>
+                            <Button onClick={showModal}><DeleteOutlined /> <b>Cancel invitations</b></Button>
                             <Modal title="You’re cancelling all invitations in the queue" visible={CancleModal} okText="Cancel invitations" okType="danger" cancelText="Back" onOk={handleOk} onCancel={handleCancel}>
-                                <h4>Once you cancel review invitations, they’ll be removed from the queue and won’t be sent to your customers.</h4>
+                                <p>Once you cancel review invitations, they’ll be removed from the queue and won’t be sent to your customers.</p>
                             </Modal>
                         </span>
                         <Table columns={columns} />
+                        <div className="text-right mt-3">
+                            <Link to="#">Clear filter</Link>
+                            </div>
                     </Card>
                 </Col>
             </Row>

@@ -7,38 +7,38 @@ import { Link, useHistory } from "react-router-dom";
 import { motion } from "framer-motion";
 import countries from "./CountryCode";
 
-// const rules = {
-// 	email: [
-// 		{
-// 			required: true,
-// 			message: 'Please input your email address'
-// 		},
-// 		{
-// 			type: 'email',
-// 			message: 'Please enter a validate email!'
-// 		}
-// 	],
-// 	password: [
-// 		{
-// 			required: true,
-// 			message: 'Please input your password'
-// 		}
-// 	],
-// 	confirm: [
-// 		{
-// 			required: true,
-// 			message: 'Please confirm your password!'
-// 		},
-// 		({ getFieldValue }) => ({
-// 			validator(rule, value) {
-// 				if (!value || getFieldValue('password') === value) {
-// 					return Promise.resolve();
-// 				}
-// 				return Promise.reject('Passwords do not match!');
-// 			},
-// 		})
-// 	]
-// }
+const rules = {
+	email: [
+		{
+			required: true,
+			message: 'Please input your email address'
+		},
+		{
+			type: 'email',
+			message: 'Please enter a validate email!'
+		}
+	],
+	password: [
+		{
+			required: true,
+			message: 'Please input your password'
+		}
+	],
+	confirm: [
+		{
+			required: true,
+			message: 'Please confirm your password!'
+		},
+		({ getFieldValue }) => ({
+			validator(rule, value) {
+				if (!value || getFieldValue('password') === value) {
+					return Promise.resolve();
+				}
+				return Promise.reject('Passwords do not match!');
+			},
+		})
+	]
+}
 
 export const RegisterForm = (props) => {
 
@@ -171,10 +171,11 @@ export const RegisterForm = (props) => {
 					<Input placeholder='Job title' />
 				</Form.Item>
 				<Form.Item
-					name="work_email"
+					name="email"
 					hasFeedback
 					onChange={(e) => onHandleChange(e)}
-					value={userRegister.work_email}
+					value={userRegister.email}
+					rules={rules.email}
 				>
 					<Input addonAfter={selectAfter} placeholder='Work email' />
 				</Form.Item>
@@ -183,24 +184,29 @@ export const RegisterForm = (props) => {
 					hasFeedback
 					onChange={(e) => onHandleChange(e)}
 					value={userRegister.password}
+					rules={rules.password}
+					type="password"
 				>
-					<Input placeholder='Enter Password' />
+					<Input.Password  placeholder='Enter Password' />
 				</Form.Item>
 				<Form.Item
-					name="confirm_password"
+					name="confirm"
 					hasFeedback
 					onChange={(e) => onHandleChange(e)}
-					value={userRegister.confirm_password}
+					value={userRegister.confirm}
+					rules={rules.confirm}
+					type="password"
 				>
-					<Input placeholder='Enter Confirm Password' />
+					<Input.Password  placeholder='Enter Confirm Password' />
 				</Form.Item>
 				<Form.Item
 					name="phone_number"
 					hasFeedback
 					onChange={(e) => onHandleChange(e)}
 					value={userRegister.phone_number}
+					
 				>
-					<Input addonBefore={selectBefore} defaultValue="Phone number" />
+					<Input addonBefore={selectBefore} placeholder="Phone number" type="number" />
 					{/* <Input placeholder='Phone number'/> */}
 				</Form.Item>
 				<Form.Item>
