@@ -9,7 +9,7 @@ const Modals = () =>{
         <React.Fragment>
             <p>We have several other options for sending invites automatically. These might require some coding skills.</p>
             <Link to="#">
-                        <Card className="mt-4">
+                        <Card className="mt-4 card-border-modal">
                             <span className="d-flex justify-content-between align-items-center">
 
                                 <div className="d-flex align-items-center">
@@ -23,7 +23,7 @@ const Modals = () =>{
                         </Card>
                     </Link>
                     <Link to="#">
-                        <Card className="mt-4">
+                        <Card className="mt-4 card-border-modal">
                             <span className="d-flex justify-content-between align-items-center">
 
                                 <div className="d-flex align-items-center">
@@ -37,7 +37,7 @@ const Modals = () =>{
                         </Card>
                     </Link>
                     <Link to="#">
-                        <Card className="mt-4">
+                        <Card className="mt-4 card-border-modal">
                             <span className="d-flex justify-content-between align-items-center">
 
                                 <div className="d-flex align-items-center">
@@ -52,7 +52,7 @@ const Modals = () =>{
                     <h4 className="mt-3">None of these work for you? Try another way</h4>
                     <p>If you can’t automate the way you ask for reviews, we have a number of other options. However, these will not be as reliable in building your TrustScore and will take more work.</p>
                     <Link to="#">
-                        <Card className="mt-4">
+                        <Card className="mt-4 card-border-modal">
                             <span className="d-flex justify-content-between align-items-center">
 
                                 <div className="d-flex align-items-center">
@@ -65,7 +65,7 @@ const Modals = () =>{
                         </Card>
                     </Link>
                     <Link to="#">
-                        <Card className="mt-4">
+                        <Card className="mt-4 card-border-modal">
                             <span className="d-flex justify-content-between align-items-center">
 
                                 <div className="d-flex align-items-center">
@@ -78,7 +78,7 @@ const Modals = () =>{
                         </Card>
                     </Link>
                     <Link to="#">
-                        <Card className="mt-4">
+                        <Card className="mt-4 card-border-modal">
                             <span className="d-flex justify-content-between align-items-center">
 
                                 <div className="d-flex align-items-center">
