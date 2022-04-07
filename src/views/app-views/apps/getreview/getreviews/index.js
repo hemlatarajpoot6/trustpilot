@@ -59,7 +59,8 @@ const GetReviews = () => {
                             </ol>
                         </span>
                     </Card>
-                    <h3>Integrations<span>RECOMMENDED</span></h3>
+                    
+                    <h3>Integrations<span className="recommended">RECOMMENDED</span></h3>
                     <p>Our plug-and-play integrations are the easiest way to send automatic invitations.</p>
                     <Row>
                         <Col xs={24} sm={24} md={24} lg={6}>

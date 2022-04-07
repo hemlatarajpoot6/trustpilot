@@ -1,7 +1,9 @@
 import React from 'react';
 import { Card } from "antd";
 import { Link } from "react-router-dom";
-import { RightOutlined, MailOutlined, FileTextOutlined } from "@ant-design/icons";
+import { RightOutlined, LinkOutlined, FileTextOutlined, UploadOutlined } from "@ant-design/icons";
+import sagment from "../../../../../assets/img/sagment.svg";
+import zapler from "../../../../../assets/img/zapler.svg";
 
 const Modals = () =>{
 
@@ -27,7 +29,7 @@ const Modals = () =>{
                             <span className="d-flex justify-content-between align-items-center">
 
                                 <div className="d-flex align-items-center">
-                                    <MailOutlined className="mr-5" />
+                                    <img src={sagment} alt="sagment" className="mr-5" />
                                     <div> 
                                         <p><b>Segment</b></p>
                                         <p>Use Segment events to trigger invitations</p></div>
@@ -41,7 +43,7 @@ const Modals = () =>{
                             <span className="d-flex justify-content-between align-items-center">
 
                                 <div className="d-flex align-items-center">
-                                    <MailOutlined className="mr-5" />
+                                <img src={zapler} alt="zapler" className="mr-5" />
                                     <div> <p><b>Zapier</b></p>
                                         <p>Connect Trustpilot to Zapier and use your existing tools to trigger invitations</p></div>
                                 </div>
@@ -56,7 +58,7 @@ const Modals = () =>{
                             <span className="d-flex justify-content-between align-items-center">
 
                                 <div className="d-flex align-items-center">
-                                    <MailOutlined className="mr-5" />
+                                    <FileTextOutlined className="mr-5" />
                                     <div> <p><b>Simple File Upload</b></p>
                                         <p>For 90 days only, you can upload a list of customers you want to send invitations to</p></div>
                                 </div>
@@ -69,7 +71,7 @@ const Modals = () =>{
                             <span className="d-flex justify-content-between align-items-center">
 
                                 <div className="d-flex align-items-center">
-                                    <MailOutlined className="mr-5" />
+                                    <UploadOutlined className="mr-5" />
                                     <div> <p><b>File Upload with Product Reviews</b></p>
                                         <p>Upload a list of customers and products they’ve purchased to send invitations</p></div>
                                 </div>
@@ -82,7 +84,7 @@ const Modals = () =>{
                             <span className="d-flex justify-content-between align-items-center">
 
                                 <div className="d-flex align-items-center">
-                                    <MailOutlined className="mr-5" />
+                                    <LinkOutlined className="mr-5" />
                                     <div> <p><b>Basic Link</b></p>
                                         <p>Get the link to your review page on Trustpilot and send it to your customers ad-hoc</p></div>
                                 </div>
