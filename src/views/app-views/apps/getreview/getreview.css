@@ -66,3 +66,9 @@ canvas{
     color: white;
     padding: 4px;
  }
+ .note-invitation{
+    padding: 20px;
+    background-color: rgb(209, 224, 255);
+    margin-top: 20px;
+    margin-bottom: 15px;
+ }

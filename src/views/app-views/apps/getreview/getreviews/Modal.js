@@ -53,7 +53,7 @@ const Modals = () =>{
                     </Link>
                     <h4 className="mt-3">None of these work for you? Try another way</h4>
                     <p>If you can’t automate the way you ask for reviews, we have a number of other options. However, these will not be as reliable in building your TrustScore and will take more work.</p>
-                    <Link to="#">
+                    <Link to={{pathname:"/app/apps/getreview/invitecustomer", title:"Invite for service reviews"}}>
                         <Card className="mt-4 card-border-modal">
                             <span className="d-flex justify-content-between align-items-center">
 
@@ -66,7 +66,7 @@ const Modals = () =>{
                             </span>
                         </Card>
                     </Link>
-                    <Link to="#">
+                    <Link to={{pathname:"/app/apps/getreview/invitecustomer", title:"Invite for service and product reviews"}}>
                         <Card className="mt-4 card-border-modal">
                             <span className="d-flex justify-content-between align-items-center">
 
@@ -79,7 +79,7 @@ const Modals = () =>{
                             </span>
                         </Card>
                     </Link>
-                    <Link to="#">
+                    <Link to="/app/apps/getreview/basicinvitation">
                         <Card className="mt-4 card-border-modal">
                             <span className="d-flex justify-content-between align-items-center">
 
