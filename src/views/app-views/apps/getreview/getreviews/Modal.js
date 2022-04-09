@@ -9,6 +9,7 @@ const Modals = () =>{
 
     return (
         <React.Fragment>
+            <div className="overflow-auto" style={{height: '480px'}}>
             <p>We have several other options for sending invites automatically. These might require some coding skills.</p>
             <Link to="#">
                         <Card className="mt-4 card-border-modal">
@@ -92,6 +93,7 @@ const Modals = () =>{
                             </span>
                         </Card>
                     </Link>
+            </div>
         </React.Fragment>
     )
 };

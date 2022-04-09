@@ -68,12 +68,12 @@ const AutomaticFedback = () => {
                         <h5><Link to="#" className="text-info">See all guides</Link></h5>
                     </Card>
                     <Card className="ml-2">
-                    <video src={video1} width="300" height="300" controls="controls" autoplay="true" />
+                    <video src={video1} width="300" height="300" controls="controls" />
                     </Card>
                     <Card className="ml-2">
                         <h3>Invitation preview</h3>
                         <div>
-                            <iframe src="https://www.w3schools.com" title="automic" sandbox="allow-same-origin" frameborder="0" >hello</iframe>
+                            <iframe src="https://www.w3schools.com" title="automic" sandbox=" allow-scripts allow-same-origin" frameborder="0" >hello</iframe>
                         </div>
                     </Card>
                 </Col>

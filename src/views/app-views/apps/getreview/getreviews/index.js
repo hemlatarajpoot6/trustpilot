@@ -161,7 +161,7 @@ const GetReviews = () => {
                         </Card>
                     </Link>
                     <b> <p>Can’t use any of the above? <span onClick={showModal} className="text-info cursor-pointer">Try a different way to get reviews.</span></p></b>
-                    <Modal title="Other ways to get reviews" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} width={1000}>
+                    <Modal className="getreview" title="Other ways to get reviews" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} width={1000}>
                         <Modals />
                       
                     </Modal>
