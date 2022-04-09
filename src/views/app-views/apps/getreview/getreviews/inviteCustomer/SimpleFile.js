@@ -36,8 +36,8 @@ const ServiceInvite = ({ ...props }) => {
             </Breadcrumb>
             <div className="note-invitation d-flex">
             <InfoCircleFilled className="text-info mr-3 mt-1" />
-                <h4>Note that once you start using this invitation method you’ll have 90 days to invite your past customers and 
-                    <Link to="/app/apps/getreview" className="text-info">set up automatic invitations </Link> for your future customers. Just want to see how the email looks? 
+                <h4>Note that once you start using this invitation method you’ll have 90 days to invite your past customers and  
+                    <Link to="/app/apps/getreview/getreviews" className="text-info"> set up automatic invitations </Link> for your future customers. Just want to see how the email looks? 
                     <Link to="#" className="text-info">Send yourself a test invitation.</Link>
                 </h4>
             </div>
