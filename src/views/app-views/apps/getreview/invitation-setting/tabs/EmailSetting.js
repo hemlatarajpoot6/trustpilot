@@ -1,6 +1,6 @@
 import { Card, Col, Row, Tooltip, Input, Select, Button, Radio, Modal } from "antd";
 import React, { useState } from "react";
-import { InfoCircleFilled } from "@ant-design/icons"
+import { InfoCircleFilled } from "@ant-design/icons";
 import language from "../../unlock/language";
 import { Link } from "react-router-dom";
 
@@ -14,6 +14,7 @@ const EmailSetting = () => {
     const [inputField, setInputField] = useState(false);
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [visible, setVisible] = useState(false);
+    const [manage, setManage] = useState(false);
 
     const onChange = e => {
         console.log('radio checked', e.target.value);
@@ -56,6 +57,18 @@ const EmailSetting = () => {
         setIsModalVisible(false);
     };
 
+    const manageModal = () => {
+        setManage(true);
+    };
+
+    const manageOk = () => {
+        setManage(false);
+    };
+
+    const manageCancel = () => {
+        setManage(false);
+    };
+
     return (
         <React.Fragment>
             <Row>
@@ -83,7 +96,7 @@ const EmailSetting = () => {
                         <Input defaultValue="engineermaster.in" className="font-weight-bold" />
                         <h5 className="mt-4">If customer replies to invitation, send the reply to:</h5>
                         <Input defaultValue="kapil.karda@engineermaster.in" className="font-weight-bold" />
-                        <p className="font-weight-bold text-info">Manage your Reply-to emails</p>
+                        <p onClick={manageModal} className="font-weight-bold text-info cursor-pointer">Manage your Reply-to emails</p>
                         <h5 className="mt-4">Sender Email:</h5>
                         <Radio.Group onChange={onChange1} value={value1}>
                             <Radio value={3}>Send from noreply.invitations@trustpilotmail.com (no further setup required)</Radio><br />
@@ -150,12 +163,27 @@ const EmailSetting = () => {
                             onCancel={() => setVisible(false)}
                             width={800}
                         >
-                           <div style={{height: '450px', overflow: 'auto'}}>
-                               {/* <iframe src="https://www.youtube.com/embed/cWDJoK8zw58" title="automic" sandbox=" allow-scripts allow-same-origin" frameborder="0" className="w-100" ></iframe> */}
-                               <iframe src="https://example.org"
-            title="iframe Example 1" width="700" height="500">
-</iframe>
-                           </div>
+                            <div style={{ height: '450px', overflow: 'auto' }}>
+                                {/* <iframe src="https://www.youtube.com/embed/cWDJoK8zw58" title="automic" sandbox=" allow-scripts allow-same-origin" frameborder="0" className="w-100" ></iframe> */}
+                                <iframe src="https://example.org"
+                                    title="iframe Example 1" width="700" height="500">
+                                </iframe>
+                            </div>
+                        </Modal>
+                        <Modal title="Manage Reply-to emails" visible={manage} onOk={manageOk} onCancel={manageCancel}>
+                            <h4>Add new Reply-to email</h4>
+                            <Input.Group compact>
+                                <Input style={{ width: '20%' }} placeholder="Email" />
+                                <Select defaultValue="1" style={{ width: "70%" }} onChange={handleChange}>
+                            <Option value="1">@engineermaster.in</Option>
+                        </Select>
+                                {/* <Input style={{ width: '30%' }} defaultValue="26888888" /> */}
+                            </Input.Group>
+                            <p className="mt-2">To add this Reply-to email address, click on the setup link in the verification email.</p>
+                            <Button type="primary" className="font-weight-bold mb-3">Send verification</Button>
+                            <h4>Remove Reply-to emails</h4>
+                            <p>kapil.karda@engineermaster.in <span style={{fontSize: "11px"}}>(This email is active and can't be deleted.)</span></p>
+                            <p>Remove the email addresses that you don't want to include.</p>
                         </Modal>
                     </Card>
                 </Col>
