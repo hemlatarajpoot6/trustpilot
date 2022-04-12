@@ -47,7 +47,7 @@ const TimingFrequency = () => {
                 <Col xs={24} sm={24} md={24} lg={16}>
                     <Card className="mr-2 font-weight-bold">
                         <h4>Send a service review invitation</h4>
-                        <span className="d-flex align-items-baseline">
+                        <span className="d-flex">
                             <Select defaultValue="19" style={{ width: "20%" }} onChange={handleChange} className="mr-2">
                                 <Option value="1">1 Days</Option>
                                 <Option value="2">2 Days</Option>
@@ -69,14 +69,14 @@ const TimingFrequency = () => {
                                 <Option value="17">2 months</Option>
                                 <Option value="18">3 months</Option>
                             </Select>
-                            <h5>after your customer’s order</h5>
+                            <h5 className="mt-2">after your customer’s order</h5>
                         </span>
                         <h4 className="mt-4">Send a product review invitation <Tooltip placement="topLeft" title={text}>
                             <InfoCircleFilled className="" />
                         </Tooltip></h4>
                         <Radio.Group onChange={onChange1} value={value1} className="font-weight-bold">
                             <Radio value={3} className="font-weight-bold align-items-center mb-2">Together with the service review invitation</Radio><br />
-                            <span className="d-flex align-items-baseline">
+                            <span className="d-flex">
                                 <Radio value={4} className="font-weight-bold align-items-center">As a separate invitation
                                 </Radio>
                                 <Select defaultValue="5" onChange={handleChange} className={value1 === 3 ? "disabled": null}>
@@ -100,7 +100,7 @@ const TimingFrequency = () => {
                                 <Option value="18">3 months</Option>
                                 </Select>
                             </span>
-                        </Radio.Group> after your customer’s order<br />
+                        </Radio.Group> <span className="mt-2" style={{marginLeft:"-4%"}}>after your customer’s order</span><br />
                         <Link to="#" className="text-info">Learn more about product review invitations</Link>
                         <h4 className="mt-3">Invitation frequency</h4>
                         <Radio.Group onChange={onChange2} value={value2}>
@@ -112,7 +112,7 @@ const TimingFrequency = () => {
                                     <InputNumber max={365} defaultValue={1} onChange={onChangeColor} className={value2 === 1 ? "disabled m-2": 'm-2' && value2 === 3 ? "disabled m-2": 'm-2'} />
                         </Radio.Group><span style={{marginLeft:"-17%", marginRight:"5px"}}> day(s)</span><span className={maxColor?"text-danger": null}>max. 365</span>
                         <h4 className="mt-3">Invitation reminders</h4>
-                        <span className="d-flex align-items-baseline font-weight-bold">
+                        <span className="d-flex font-weight-bold">
                             <Checkbox onChange={onChange} className="font-weight-bold">Send an invitation reminder to each customer after</Checkbox> <Select defaultValue="19" onChange={handleChange} className="ml-2 mr-2">
                             <Option value="1">1 Days</Option>
                             <Option value="1">1 Days</Option>
@@ -133,7 +133,7 @@ const TimingFrequency = () => {
                                 <Option value="15">5 weeks</Option>
                                 <Option value="16">6 weeks</Option>
                             </Select>
-                            if they don't leave a review
+                           <span className="mt-2"> if they don't leave a review</span>
                         </span>
                         <p onClick={() => setVisible(true)} className="font-weight-bold text-info cursor-pointer">Show preview</p>
                         <Button type="primary" className={maxColor? "disabled mt-4 font-weight-bold": "mt-4 font-weight-bold"}>Save changes</Button>
