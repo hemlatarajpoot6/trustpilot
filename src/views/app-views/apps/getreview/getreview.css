@@ -87,3 +87,10 @@ canvas{
 .getreview{
     top: 0 !important;
 }
+.disabled{
+    cursor: not-allowed;
+   pointer-events: none;
+   border: 1px solid #999999;
+   color: #666666;
+   opacity: 0.5;
+}

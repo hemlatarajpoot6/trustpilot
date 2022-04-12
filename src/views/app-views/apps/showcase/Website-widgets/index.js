@@ -33,18 +33,18 @@ const WebsiteWidgets = () =>{
                     </Col>
                     <Col xs={24} sm={24} md={24} lg={9}>
                         
-                        <div className="ml-3 mr-3 mb-3">
+                        <div className="ml-3 mr-3 mb-3 cursor-pointer" onClick={showModal}>
                         <div className="image-box ">
-                        <Link to="#">
+                       
                             <img src={essential} alt="essential" />
-                            </Link>
+                            
                         </div>
-                            <Link to="#">
+                           
                             <div className="image-box">
                                 <p className="recommented pl-1 pr-1 ml-3">Recommended</p>
-                                <h5 className="text-left p-3 border bg-white shadow" onClick={showModal}>Micro Review Count</h5>
+                                <h5 className="text-left p-3 border bg-white shadow">Micro Review Count</h5>
                             </div>
-                        </Link>
+                      
                         </div>
                        
                     </Col>
