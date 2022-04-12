@@ -51,11 +51,11 @@ const TimingFrequency = () => {
                             <InfoCircleFilled className="" />
                         </Tooltip></h4>
                         <Radio.Group onChange={onChange1} value={value1} className="font-weight-bold">
-                            <Radio value={3} className="font-weight-bold">Together with the service review invitation</Radio><br />
+                            <Radio value={3} className="font-weight-bold align-items-center mb-2">Together with the service review invitation</Radio><br />
                             <span className="d-flex align-items-baseline">
-                                <Radio value={4} className="font-weight-bold">As a separate invitation
+                                <Radio value={4} className="font-weight-bold align-items-center">As a separate invitation
                                 </Radio>
-                                    <Select defaultValue="7" onChange={handleChange} className="ml-1 mr-1 mt-1 mb-1">
+                                    <Select defaultValue="5" onChange={handleChange} className="ml-1 mr-1 mt-1 mb-1">
                                         <Option value="1">1 Days</Option>
                                         <Option value="2">2 Days</Option>
                                         <Option value="3">3 Days</Option>
@@ -69,14 +69,14 @@ const TimingFrequency = () => {
                         <Link to="#" className="text-info">Learn more about product review invitations</Link>
                         <h4 className="mt-3">Invitation frequency</h4>
                         <Radio.Group onChange={onChange2} value={value2}>
-                            <Radio value={1} className="font-weight-bold">Each customer should be invited to write a review after every purchase they make</Radio><br />
+                            <Radio value={1} className="font-weight-bold align-items-center">Each customer should be invited to write a review after every purchase they make</Radio><br />
                             <span className="d-flex align-items-baseline">
-                                <Radio value={2} className="font-weight-bold">Only ask each customer to review 1 order every
-                                    <InputNumber min={1} max={10} defaultValue={3} onChange={onChange} className="m-2" />
+                                <Radio value={2} className="font-weight-bold align-items-center">Only ask each customer to review 1 order every
+                                    <InputNumber min={1} max={10} defaultValue={1} onChange={onChange} className="m-2" />
                                     day(s)max. 365
                                 </Radio>
                             </span>
-                            <Radio value={3} className="font-weight-bold">Only ask each customer to review 1 order every 1 year</Radio><br />
+                            <Radio value={3} className="font-weight-bold align-items-center">Only ask each customer to review 1 order every 1 year</Radio><br />
                         </Radio.Group>
                         <h4 className="mt-3">Invitation reminders</h4>
                         <span className="d-flex align-items-baseline font-weight-bold">

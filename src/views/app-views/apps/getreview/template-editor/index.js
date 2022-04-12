@@ -30,7 +30,7 @@ const TemplateEditor = () =>{
                                     <CheckCircleFilled className="text-success mr-3 mt-1" />
                                     <div>
                                         <li className="list-box-product">
-                                            <b> Product TrustBoxes</b> to showcase reviews on your product and category pages
+                                            <b>Promotion and guarantee content boxes</b> to build brand awareness on your Trustpilot public profile
                                         </li>
                                     </div>
                                 </div>
@@ -38,7 +38,8 @@ const TemplateEditor = () =>{
                                     <CheckCircleFilled className="text-success mr-3 mt-1" />
                                     <div>
                                         <li className="list-box-product">
-                                            <b>Rich snippet stars</b> to stand out in organic search results
+                                            <b>Facebook Like content box</b> to highlight your Facebook page on your Trustpilot public profile
+
                                         </li>
                                     </div>
                                 </div>
@@ -46,7 +47,7 @@ const TemplateEditor = () =>{
                                     <CheckCircleFilled className="text-success mr-3 mt-1" />
                                     <div>
                                         <li className="list-box-product">
-                                            <b> User-generated photos in product reviews</b> you can showcase on your site and in your marketing materials
+                                            <b> Customized review invitations</b> to add your company’s logo and branding
                                         </li>
                                     </div>
                                 </div>
@@ -54,7 +55,7 @@ const TemplateEditor = () =>{
                                     <CheckCircleFilled className="text-success mr-3 mt-1" />
                                     <div>
                                         <li className="list-box-product">
-                                            <b> Google Seller Ratings for product ads</b> to increase traffic and sales
+                                            <b> Advanced analytics</b> to track Google organic search performance and invitation-to-review conversion
                                         </li>
                                     </div>
                                 </div>
@@ -62,7 +63,7 @@ const TemplateEditor = () =>{
                                     <CheckCircleFilled className="text-success mr-3 mt-1" />
                                     <div>
                                         <li className="list-box-product">
-                                            <b>Import existing third-party product reviews</b> for a head start on your collection
+                                            <b>Export review data</b> to share and analyze with team members in your company
                                         </li>
                                     </div>
                                 </div>

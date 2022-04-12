@@ -171,7 +171,7 @@ const Upgrade = () => {
                                 <p>Build trust and increase conversions across your business (on-site, in marketing channels and on social) with our extensive library of service review TrustBox widgets.</p>
                                 <h4>This add-on module includes:</h4>
                                 <ul>
-                                    <li>Showcase reviews across your website, email, and digital marketing</li>
+                                    <li className="list">Showcase reviews across your website, email, and digital marketing</li>
                                     <li className="list"><b>TrustBox Optimizer</b> to track and optimize the performance of your TrustBox widgets with built-in split testing.</li>
                                     <li className="list"><b>Targeted Trustboxes</b> to show your most relevant reviews</li>
                                     <li className="list"><b>Facebook integration</b> to display reviews on your company’s Facebook page</li>

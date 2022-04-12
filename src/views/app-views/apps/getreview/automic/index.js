@@ -19,7 +19,7 @@ const AutomaticFedback = () => {
         <img src={automic} alt="automic" />
         <h3 className="mt-3">BCC field? What’s that?</h3>
         <h5 className="">BCC stands for blind carbon copy. It’s the field that hides a recipient’s email address.</h5>
-        <Button className="w-25 mb-3 font-weight-bold">Okay, I have configured my platform</Button>
+        <Button className="mb-3 font-weight-bold">Okay, I have configured my platform</Button>
     </>
     const text3 = <>
         <h3>All set! Trustpilot should now be receiving copies of your customer emails</h3>
@@ -39,15 +39,15 @@ const AutomaticFedback = () => {
                         </h5>
                         <h4 className="mt-3 font-weight-bold">Do you send your customers confirmation emails after a purchase?</h4>
                         <h5 className="">If yes, follow the simple steps below to start collecting reviews automatically.</h5>
-                       <div className="mt-4 mb-4"> 
-                           <Steps direction="vertical" current={0}>
-                            <Step description={text} />
-                            <Step description={text2} />
-                            <Step description={text3} />
-                        </Steps>
+                        <div className="mt-4 mb-4">
+                            <Steps direction="vertical" current={0}>
+                                <Step description={text} />
+                                <Step description={text2} />
+                                <Step description={text3} />
+                            </Steps>
                         </div>
                         <h3>Do you want to delay your automatic review invitations by a specific number of days?</h3>
-                        <h5 className="">To ensure your customers are able to write meaningful reviews, we recommend you delay your invitations for a period that suits your business needs. To change the delay settings from the 7-day default, go to <Link to="#" className="text-info">Invitation Settings</Link></h5>
+                        <h5 className="">To ensure your customers are able to write meaningful reviews, we recommend you delay your invitations for a period that suits your business needs. To change the delay settings from the 7-day default, go to <Link to="/app/apps/getreview/Invitationsettings" className="text-info">Invitation Settings</Link></h5>
                     </Card>
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={8}>
@@ -68,7 +68,7 @@ const AutomaticFedback = () => {
                         <h5><Link to="#" className="text-info">See all guides</Link></h5>
                     </Card>
                     <Card className="ml-2">
-                    <video src={video1} width="300" height="300" controls="controls" />
+                        <video src={video1} width="300" height="300" controls="controls" />
                     </Card>
                     <Card className="ml-2">
                         <h3>Invitation preview</h3>

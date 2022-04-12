@@ -88,9 +88,10 @@ const EmailSetting = () => {
                         <p onClick={() => setVisible(true)} className="font-weight-bold text-info">Show preview</p>
                         <h5 className="mt-4">Select company identifier for invitation templates:</h5>
                         <p className="font-weight-bold">The [CompanyIdentifier] placeholder is used in invitation templates to help your customers recognize your company.</p>
-                        <Radio.Group onChange={onChange} value={value}>
-                            <Radio value={1}>engineermaster.in</Radio><br />
-                            <Radio value={2}>Engineer Master Solutions Pvt Ltd</Radio><br />
+                        <Radio.Group onChange={onChange} value={value} className="font-weight-bold">
+                            <Radio value={1} className="align-items-center mb-2">engineermaster.in</Radio><br />
+                            <br />
+                            <Radio value={2} className="align-items-center">Engineer Master Solutions Pvt Ltd</Radio><br />
                         </Radio.Group>
                         <h5 className="mt-4">Sender Name:</h5>
                         <Input defaultValue="engineermaster.in" className="font-weight-bold" />
@@ -98,9 +99,9 @@ const EmailSetting = () => {
                         <Input defaultValue="kapil.karda@engineermaster.in" className="font-weight-bold" />
                         <p onClick={manageModal} className="font-weight-bold text-info cursor-pointer">Manage your Reply-to emails</p>
                         <h5 className="mt-4">Sender Email:</h5>
-                        <Radio.Group onChange={onChange1} value={value1}>
-                            <Radio value={3}>Send from noreply.invitations@trustpilotmail.com (no further setup required)</Radio><br />
-                            <Radio value={4} disabled>Send email using your own email domain for the Sender Address (requires technical knowledge to set up)
+                        <Radio.Group onChange={onChange1} value={value1} className="font-weight-bold">
+                            <Radio value={3} className="align-items-center mb-2">Send from noreply.invitations@trustpilotmail.com (no further setup required)</Radio><br />
+                            <Radio value={4} disabled className="align-items-center mb-2">Send email using your own email domain for the Sender Address (requires technical knowledge to set up)
                             </Radio>
                         </Radio.Group>
                         <Tooltip placement="topLeft" title={text}>
@@ -114,9 +115,9 @@ const EmailSetting = () => {
                         <h5 className="mt-4">Privacy policy link <Tooltip placement="topLeft" title={text2}>
                             <InfoCircleFilled className="" />
                         </Tooltip></h5>
-                        <Radio.Group onChange={onChange2} value={value2}>
-                            <Radio value={5}>No, I don’t want to link to my Privacy Policy</Radio><br />
-                            <Radio value={6}>Yes, I’d like to link to my Privacy Policy</Radio><br />
+                        <Radio.Group onChange={onChange2} value={value2} className="font-weight-bold">
+                            <Radio value={5} className="align-items-center mb-2">No, I don’t want to link to my Privacy Policy</Radio><br />
+                            <Radio value={6} className="align-items-center mb-2">Yes, I’d like to link to my Privacy Policy</Radio><br />
                         </Radio.Group><br />
                         {
                             inputField ?
@@ -147,7 +148,7 @@ const EmailSetting = () => {
                                     <Card className="ml-2 h-100">
                                         <h5 className="p-2">Want custom email templates?
                                             With custom templates, you can personalize your invitations to match your brand. To learn more, please take a look at our features and pricing.</h5>
-                                        <Link to="#" class="font-weight-bold text-info p-2">Upgrade</Link>
+                                        <Link to="/app/apps/getreview/unlock" class="font-weight-bold text-info p-2">Upgrade</Link>
                                     </Card>
                                 </Col>
                             </Row>

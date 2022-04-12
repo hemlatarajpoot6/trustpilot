@@ -40,8 +40,8 @@ const ConsumerPrivacy = () => {
                     <Card className="mr-2 h-100">
                         <h3>Delete invitation data</h3>
                         <Radio.Group onChange={onChange} value={value}>
-                            <Radio value={1}>Delete the invitations data of <b>specific customers</b></Radio><br />
-                            <Radio value={2}>Delete all invitations created <b>before a specific date</b></Radio><br />
+                            <Radio value={1} className="align-items-center mb-2 font-weight-bold">Delete the invitations data of <b>specific customers</b></Radio><br />
+                            <Radio value={2} className="align-items-center font-weight-bold">Delete all invitations created <b>before a specific date</b></Radio><br />
                         </Radio.Group><br />
 
                         {
